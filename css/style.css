@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;
@@ -126,7 +126,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: rgba(0, 49, 95, 0.24);
 	transition: 0.3s ease background-color;
 	
 }
@@ -194,7 +194,7 @@ p {
 	height: 60px;
 	width: 60px;
 	display: inline-block;
-	border: 3px solid white;
+	border: 3px solid rgb(255, 255, 255);
 	border-radius: 50%;
 	position: relative;
 	display: flex;
