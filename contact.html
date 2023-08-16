@@ -20,6 +20,7 @@
   <meta name="owner" content="David Aroni">
   <meta name="designer" content="Yefferson acero">
   <link rel="shortcut icon" href="img.icon/Datacor.png"> <!--Verificar -->
+    
 
   
 </head>
@@ -208,6 +209,11 @@ document.getElementById('form').addEventListener('submit', function(event) {
         "@type": "Place",
         "name": "Nombre del Lugar",
         "address": "Calle José María Vilchez 840, Lima, Perú"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Compañía Cordillera Data",
+        "url": "https://www.cordilleradata.com/contact"
       }
     }
     </script>
@@ -222,15 +228,28 @@ document.getElementById('form').addEventListener('submit', function(event) {
         "addressCountry": "Perú"
       }
       </script>
-      <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "ContactPoint",
-          "telephone": "+51 999365216",
-          "email": "cordilleradatascience@gmail.com"
-        }
-        </script>
-                  
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "name": "Compañía Cordillera Data",
+              "url": "https://www.cordilleradata.com/contact",
+              "description": "Descripción del organizador",
+              "logo": "https://www.cordilleradata.com/contact/img.icon/Datacor.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+51 999365216",
+                "email": "cordilleradatascience@gmail.com"
+              },
+              "sameAs": [
+                "https://www.facebook.com/organizador",
+                "https://www.twitter.com/organizador",
+                "https://www.instagram.com/organizador"
+              ]
+            }
+            </script>
+              
+            
 </body>
 
 </html>
