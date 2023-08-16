@@ -95,15 +95,7 @@
             <img src="./img/img-1.png" alt="img">
           </div>
         </div>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "CreativeWork",
-            "name": "Project 1",
-            "description": "Coding is Love",
-            "image": "./img/img-1.png"
-          }
-          </script>
+
         <div class="project-item">
           <div class="project-info">
             <h2>Project 2</h2>
@@ -116,15 +108,7 @@
             <img src="./img/img-1.png" alt="img">
           </div>
         </div>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "CreativeWork",
-            "name": "Project 2",
-            "description": "Coding is Love",
-            "image": "./img/img-1.png"
-          }
-          </script>
+
         <div class="project-item">
           <div class="project-info">
             <h2>Project 3</h2>
@@ -137,15 +121,6 @@
             <img src="./img/img-1.png" alt="img">
           </div>
         </div>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "CreativeWork",
-            "name": "Project 3",
-            "description": "Coding is Love",
-            "image": "./img/img-1.png"
-          }
-          </script>
         <div class="project-item">
           <div class="project-info">
             <h2>Project 4</h2>
@@ -157,16 +132,8 @@
           <div class="project-img">
             <img src="./img/img-1.png" alt="img">
           </div>
-        </div>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "CreativeWork",
-            "name": "Project 4",
-            "description": "Coding is Love",
-            "image": "./img/img-1.png"
-          }
-          </script>
+          </div>
+
         <div class="project-item">
           <div class="project-info">
             <h2>Project 5</h2>
@@ -179,15 +146,6 @@
             <img src="./img/img-1.png" alt="img">
           </div>
         </div>
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "CreativeWork",
-            "name": "Project 5",
-            "description": "Coding is Love",
-            "image": "./img/img-1.png"
-          }
-          </script>
       </div>
     </div>
   </section>
@@ -221,6 +179,40 @@
 </section>
   <!-- End Footer -->
 <script  src="js/cursor.js"></script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "name": "Elaboración de proyectos",
+    "description": "Una lista de varios proyectos que he realizado",
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "name": "Proyecto de Arte 1",
+        "description": "Descripción del primer proyecto de arte",
+        "url": "URL_del_proyecto_1",
+        "position": 1
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Proyecto de Software 1",
+        "description": "Descripción del primer proyecto de software",
+        "url": "URL_del_proyecto_2",
+        "position": 2
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Proyecto de Investigación 1",
+        "description": "Descripción del primer proyecto de investigación",
+        "url": "URL_del_proyecto_3",
+        "position": 3
+      }
+      // Agrega más proyectos según sea necesario
+    ]
+  }
+  </script>
+  
 </body>
 
 </html>
