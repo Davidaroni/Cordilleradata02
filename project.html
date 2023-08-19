@@ -57,7 +57,7 @@
 </div>-->
   <!-- Hero Section  -->
 
-  <section id="hero">
+<!--  <section id="hero">
     <div class="hero container">
       <div>
         <h1>Elaboramos la formulación,elaboración y   <span></span></h1>
@@ -66,7 +66,7 @@
        
       </div>
     </div>
-  </section>
+  </section>-->
   <!--<div class="carousel">
     <img src="img/hero-bg.png" alt="Imagen 1">
     <img src="img/job-office-team.png" alt="Imagen 2">
@@ -81,6 +81,9 @@
     <div class="projects container">
       <div class="projects-header">
         <h1 class="section-title">elabaracion de <span>proyectos</span></h1>
+        <p>El proyecto es un documento en el que se planifica una serie de actividades, para lograr un objetivo como la puesta en marcha y operación de un negocio, empresa o compañía. 
+          Elaboramos la formulación, elaboración y evaluación de proyectos de inversión privados, bajo el siguiente esquema: 
+          </p>
       </div>
       <div class="all-projects">
         <div class="project-item">
@@ -185,7 +188,7 @@
     "@context": "http://schema.org",
     "@type": "ItemList",
     "name": "Elaboración de proyectos",
-    "description": "Una lista de varios proyectos que he realizado",
+    "description": "Formulación y evaluación de proyectos de negocios",
     "itemListElement": [
       {
         "@type": "CreativeWork",
@@ -212,7 +215,16 @@
     ]
   }
   </script>
-  
+  <script>
+    window.addEventListener("scroll", function() {
+      var header = document.getElementById("header");
+      if (window.scrollY > 0) {
+        header.classList.add("scroll-down");
+      } else {
+        header.classList.remove("scroll-down");
+      }
+    });
+  </script>
 </body>
 
 </html>

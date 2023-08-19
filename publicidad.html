@@ -258,7 +258,7 @@
           {
             "@type": "Service",
             "name": "Elaboración de paginas web",
-            "description": "Ofrecemos servicios de reparación de paginas web.",
+            "description": "Ofrecemos servicios de elabaracion de paginas web.",
             "url": "URL_DEL_SERVICIO"
           },
           {
@@ -296,7 +296,16 @@
       }
       </script>
       
-              
+      <script>
+        window.addEventListener("scroll", function() {
+          var header = document.getElementById("header");
+          if (window.scrollY > 0) {
+            header.classList.add("scroll-down");
+          } else {
+            header.classList.remove("scroll-down");
+          }
+        });
+      </script> 
               
   
                             
