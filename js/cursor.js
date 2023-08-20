@@ -33,6 +33,8 @@ menu_item.forEach((item) => {
 document.cookie = "yourCookieName=yourCookieValue; SameSite=None; Secure";
 document.cookie = "your_cookie_name=your_cookie_value; SameSite=None; Secure";
 document.cookie = "your_cookie_name=your_cookie_value; SameSite=Strict";
+document.cookie = "cookie_name=value; SameSite=None; Secure";
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*END CONTA */
+
 
 
 
