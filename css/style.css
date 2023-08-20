@@ -1,4 +1,5 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+  
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;
@@ -126,7 +127,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+
 	transition: 0.3s ease background-color;
 	
 }
@@ -143,7 +144,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: rgb(31, 30, 30);
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -171,6 +172,12 @@ p {
 	display: block;
 	font-weight: bold;
 }
+/* acroll*/
+.scroll-down .nav-bar {
+	transform: translateY(-100%);
+	transition: transform 0.3s ease-in-out;
+  }
+  
 #header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
@@ -193,8 +200,7 @@ p {
 #header .hamburger {
 	height: 60px;
 	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
+	display: inline-block;	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -211,7 +217,7 @@ p {
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid rgb(253, 4, 4);
 	animation: hamburger_puls 1s ease infinite;
 }
 #header .hamburger .bar {
@@ -578,7 +584,7 @@ main::after {
 /*why work with DATACOR*/
 
 #work{
-	margin-top: -100px;
+	margin-top: -10px;
 }
 #work .work{
 	flex-direction: column-reverse;
@@ -879,6 +885,15 @@ main::after {
 /*End research Section */
 
 /* Projects section */
+#projects .projects-header {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 800px;
+}
+#projects .projects-header {
+	margin-top: 780px;
+}
 
 #projects .projects {
 	flex-direction: column;
@@ -888,6 +903,7 @@ main::after {
 }
 #projects .projects-header h1 {
 	margin-bottom: 50px;
+	margin-top: 200px;
 }
 #projects .all-projects {
 	display: flex;
@@ -977,7 +993,12 @@ main::after {
 		  width: 100%;
 		  border-radius: 5%;
 		}
-	  
+		#projects{
+			margin-top: -900px;
+		}
+		#projects .projects-header p{
+			font-size: 1.3rem;
+		}
 		#projects .project-info {
 		  padding: 12px;
 		}
@@ -1050,6 +1071,10 @@ main::after {
   position: absolute;
   inset: 0;
   display: block;
+}
+.tarjeta p{
+	color: #ffffff;
+	font-weight: bold;
 }
 .tarjeta-contenido a i::before {
   content: '';
@@ -1499,7 +1524,7 @@ main::after {
 		  margin: 10px 0;
 		}
 		#work{
-			margin-top: -150px;
+			margin-top: -40px;
 		}
 	  }
 	  	/* end why work with DATACOR*/
@@ -1507,7 +1532,7 @@ main::after {
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	
-	
+
 	.cta {
 		font-size: 2rem;
 		padding: 10px 30px;
@@ -1586,6 +1611,12 @@ main::after {
 	/* End Services Section */
 
 	/* Project */
+	
+	
+	#projects{
+		margin-top: -800px;
+	}
+	.project-
 	#projects .project-item {
 		flex-direction: row;
 	}
@@ -1683,6 +1714,8 @@ main::after {
 }
 /* End Media Query For Tablet */
 
+
+
 @media (max-width: 768px) {
 	/* Servie section 2*/
 	.dos{
@@ -1691,6 +1724,7 @@ main::after {
 	.flip-card-front h2{
 		font-size: 1.6rem;
 	}
+
 	/*End service section 2*/
 	main {
 	  height: 75vh; 
