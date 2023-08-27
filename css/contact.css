@@ -96,13 +96,21 @@ p {
 
 .logoo{
 	margin-left: 1%;
-	line-height: 80px; 
-	margin-top: 10px;
+
 }
 
 .logoo img{
 	width:175px ;
 	height: 150px ;
+}
+@media (max-width: 768px) {
+    .logoo img{
+		width:105px ;
+		height: 100px ;
+    }
+	.logoo{
+		margin-top: 2%;
+	}
 }
 
 /* Header section */
@@ -116,7 +124,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	
+	background-color: #485563;
 	transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -131,7 +139,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-color: rgb(8, 8, 8);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -144,12 +152,22 @@ p {
 	overflow-x: visible;
 	transition: 0.5s ease left;
 }
+#header .nav-list ul::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 10%;
+	margin-top: 17px;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+	z-index: -1;
+	opacity: 0.8;
+  }
 #header .nav-list ul.active {
 	left: 0%;
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
-	font-weight: 500;
+
 	letter-spacing: 0.1rem;
 	text-decoration: none;
 	color: white;

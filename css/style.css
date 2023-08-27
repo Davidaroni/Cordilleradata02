@@ -106,13 +106,21 @@ p {
 
 .logo{
 	margin-left: 1%;
-	line-height: 80px; 
-	margin-top: 10px;
+
 }
 
 .logo img{
 	width:175px ;
 	height: 150px ;
+}
+@media (max-width: 768px) {
+    .logo img{
+		width:105px ;
+		height: 100px ;
+    }
+	.logo{
+		margin-top: 2%;
+	}
 }
 
 /* Header section */
@@ -126,8 +134,8 @@ p {
 	
 }
 #header .header {
-	min-height: 8vh;
-
+	min-height: 8vh; 
+	background-color: #485563;
 	transition: 0.3s ease background-color;
 	
 }
@@ -141,10 +149,11 @@ p {
 	padding: 0 10px;
 	
 }
+
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-color: rgb(8, 8, 8);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -156,8 +165,20 @@ p {
 	z-index: 1;
 	overflow-x: visible;
 	transition: 0.5s ease left;
-	
-}
+  }
+  
+  #header .nav-list ul::before {
+	content: "";
+	position: absolute;
+	width: 75%;
+	height: 10%;
+	margin-top: 17px;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+	z-index: -1;
+	opacity: 0.8;
+  }
+  
+
 #header .nav-list ul.active {
 	left: 0%;
 }
@@ -166,17 +187,17 @@ p {
 	
 	letter-spacing: 0.1rem;
 	text-decoration: none;
-	color: rgb(255, 255, 255);
+	color: rgb(255, 254, 254);
 	text-transform: uppercase;
 	padding: 15px;
 	display: block;
 	font-weight: bold;
 }
-/* acroll*/
+/* acroll
 .scroll-down .nav-bar {
 	transform: translateY(-100%);
 	transition: transform 0.3s ease-in-out;
-  }
+  }*/
   
 #header .nav-list ul a::after {
 	content: attr(data-after);
@@ -583,8 +604,19 @@ main::after {
 
 /*why work with DATACOR*/
 
-#work{
-	margin-top: -10px;
+#work2{
+	margin-top: -200px;
+}
+#work2 .work{
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#work2 .work-top{
+	max-width: 500px;
+	margin: 0 auto;
 }
 #work .work{
 	flex-direction: column-reverse;
@@ -597,7 +629,82 @@ main::after {
 	max-width: 500px;
 	margin: 0 auto;
 }
+.gallery{
+    display: grid;
+    background-size: cover;
+    float: left;
+    width: 300px;
+    height: auto;
+	margin: 10px 85px 25px -85px; 
+    shape-outside: circle();
+}
 
+.gallery img{
+    padding: 20px;
+    filter: drop-shadow(1px 1px 2px rgb(203, 201 201));
+    grid-area: 1/1;
+    width: 400px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 0;
+    transition:transform .2s, clip-path .3s, z-index 0s;
+    
+}
+.gallery img:hover {
+    z-index: 1;
+    transition:transform .2s, clip-path .3s, z-index 0s;
+  }
+.gallery > img:nth-child(1){
+    clip-path: polygon(50% 48%,
+    98% 0, 98% 0, 98% 0,2% 0,2% 0,2% 0);
+}
+
+.gallery > img:nth-child(2){
+    clip-path: polygon(52% 50%,
+    100% 98%, 100% 98%, 100% 98%,100% 2%,100% 2%,
+    100% 2%);
+}
+.gallery > img:nth-child(3){
+    clip-path: polygon(50% 52%,
+    98% 100%, 98% 100%, 98% 100%,2% 100%,2% 100%,
+    2% 100%);
+}
+
+.gallery > img:nth-child(4){
+    clip-path: polygon(48% 50%,
+    0 98%, 0 98%, 0 98%,0 2%,0 2%,0 2%);
+}
+
+.gallery > img:nth-child(1):hover{
+    clip-path: polygon(50% 25%,
+    50% 100%, 100% 100%, 100% 0,0 0,0 100%,
+    50% 100%);
+}
+.gallery > img:nth-child(2):hover{
+    clip-path: polygon(52% 50%,
+    0 50%, 0 100%,100% 100%,100% 0,0 0,
+    0 50% );
+}
+.gallery > img:nth-child(3):hover{
+    clip-path: polygon(50% 52%,
+    50% 0, 100% 0, 100% 100%,0 100%,0 0,
+    50% 0);  
+}
+.gallery > img:nth-child(4):hover{
+    clip-path: polygon(48% 50%,
+    100% 50%, 100% 100%, 0 100%,0 0,100% 0,
+    100% 50%);  
+}
+
+@media screen and (max-width: 600px) {
+	.gallery img {
+		width: 100%; /* Make images take up full width on smaller screens */
+		align-items: center;
+		margin-left: 50px;
+	}
+}
 /* end why work with DATACOR*/
 
 
@@ -1505,7 +1612,7 @@ main::after {
 		  text-align: center;
 		}
 		#about{
-			margin-top: -40px;
+			margin-top: -50px;
 		}
 		.section-title {
 		  font-size: 1.8rem;
@@ -1645,7 +1752,7 @@ main::after {
 	/* About */
 
 	#about{
-		margin-top: -50px;
+		margin-top: -80px;
 	}
 	#about .about {
 		flex-direction: row;
