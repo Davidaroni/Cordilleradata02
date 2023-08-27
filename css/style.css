@@ -170,7 +170,7 @@ p {
   #header .nav-list ul::before {
 	content: "";
 	position: absolute;
-	width: 75%;
+	width: 72%;
 	height: 10%;
 	margin-top: 17px;
 	background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
