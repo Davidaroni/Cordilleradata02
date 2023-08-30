@@ -195,6 +195,16 @@
         }
       });
     </script>
+    <script>
+      document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+    </script>
 
 <script  src="js/cursor.js"></script>
 </body>

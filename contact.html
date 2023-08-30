@@ -277,6 +277,16 @@ document.getElementById('form').addEventListener('submit', function(event) {
                 }
               });
             </script>--> 
+            <script>
+              document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+            </script>
 
 </body>
 
