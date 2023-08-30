@@ -15,7 +15,9 @@
 
   <meta name="keywords" content="Contacto de publicidad online, Contacto de servicio de SEO en Perú">
   <meta name="description" content="Contacto de empresa de publicidad online">
-  <meta http-equiv="cache-control" content="no-cache"> <!--actualiza al momento -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="author" content="Yefferson Acero">
   <meta name="owner" content="David Aroni">
   <meta name="designer" content="Yefferson acero">
@@ -203,7 +205,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const formData = new FormData(this);
   formData.set('g-recaptcha-response', recaptchaResponse);
 
-  emailjs.sendForm(serviceID, templateID, formData)
+  emailjs.sendForm(serviceID, templateID, this)
+
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
