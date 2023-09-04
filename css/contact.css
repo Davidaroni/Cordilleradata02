@@ -25,6 +25,7 @@ body{
     width: 100%;
 	
 }
+
 /*scroll*/
 .scroll-down .nav-bar {
 	transform: translateY(-100%);
@@ -100,18 +101,33 @@ p {
 }
 
 .logoo img{
-	width:175px ;
-	height: 150px ;
+	width:95px ;
+	height: 11vh ;
 }
-@media (max-width: 768px) {
-    .logoo img{
-		width:105px ;
-		height: 100px ;
-    }
-	.logoo{
-		margin-top: 2%;
+@media (max-width: 767px) {
+	.logoo {
+	  text-align: center; /* Centra el logotipo */
 	}
-}
+	
+	.logoo a {
+	  display: block; /* Convierte el enlace en un bloque para que ocupe el ancho completo */
+	}
+  
+	.logoo img {
+	  max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+	  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+	}
+  }
+  @media (max-width: 1200px) {
+	.logoo {
+	  text-align: center; /* Centra el logotipo en tablet */
+	}
+  
+	.logoo img {
+	  max-width: 100%; /* Ajusta el ancho máximo del logotipo al 100% del contenedor */
+	  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+	}
+  }
 
 /* Header section */
 #header {
@@ -124,8 +140,9 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: #485563;
+	background-color: #ffffff;
 	transition: 0.3s ease background-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 #header .nav-bar {
 	display: flex;
@@ -139,7 +156,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: rgb(8, 8, 8);
+	background-color: rgb(31, 30, 30);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -152,28 +169,21 @@ p {
 	overflow-x: visible;
 	transition: 0.5s ease left;
 }
-#header .nav-list ul::before {
-	content: "";
-	position: absolute;
-	width: 75%;
-	height: 10%;
-	margin-top: 17px;
-	background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
-	z-index: -1;
-	opacity: 0.8;
-  }
+
+
 #header .nav-list ul.active {
 	left: 0%;
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
-
+	font-weight: 500;
 	letter-spacing: 0.1rem;
 	text-decoration: none;
-	color: white;
+	color: rgb(52, 106, 168);
 	text-transform: uppercase;
 	padding: 15px;
 	display: block;
+	font-weight: bold;
 }
 #header .nav-list ul a::after {
 	content: attr(data-after);
@@ -266,10 +276,6 @@ p {
 	margin: 0 auto;
 	width: 100%;
 }
-
-	
-	
- 
 #contact .contact-items {
 	/* max-width: 400px; */
 	width: 100%;
@@ -313,7 +319,6 @@ p {
 .contacto{
     padding-top: 5rem;
 	margin-bottom: 10rem;
-
 }
 .contacto h2{
     text-align: center;
@@ -327,7 +332,9 @@ p {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+	
 }
+
 
 .informacion-contacto{
     background-image: url('../img/contacto.jpg');
@@ -340,12 +347,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-}
-@media(min-width: 768px) {
-    .informacion-contacto{
-        height: 100vh;
-    }
 
 }
 .informacion-contacto::before{
@@ -380,6 +381,12 @@ p {
     flex-direction: column;
     justify-content: center;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+.formulario-contacto h3{
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 20px;
+	text-transform: uppercase;
 }
 
 .input-contacto label{
@@ -558,6 +565,8 @@ p {
 		min-width: 20vh;
 		margin-top: 150px;
 	}
+
+
 	
 
 
@@ -590,7 +599,7 @@ p {
 	 #map-container {
 		width: 50%; /* Puedes ajustar este valor para cambiar el tamaño del mapa */
 		height: 80vh; /* Puedes ajustar este valor para cambiar la altura del mapa */
-		margin-top: -48%;
+		margin-top: -56.1%;
 	}
 	  
 	  #map {
@@ -644,48 +653,7 @@ p {
 
 
 
-#top{
-    position: relative;
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#top::before{
-    content:'';
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    height:150px;
-    width: 100%;
-    background:linear-gradient(to top,#ffffff,transparent);
-    z-index: 1000;
-}
 
-.man{
-    top: inherit;
-    bottom: 0;
-}
-
-
-#top img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-#top .text{
-    position: relative;
-    color:rgb(0, 0, 0);
-    font-size: 5rem;
-}
 @media screen and (max-width: 768px) {
     .text {
       font-size: 5rem; /* Tamaño de fuente más pequeño para dispositivos móviles */
@@ -704,7 +672,7 @@ p {
 		font-size: 2rem;
 	}
 	#contact{
-		margin-top: -50px;
+		margin-top: -150px;
 	}
 	.contact.container {
 		flex-direction: column; /* Stack contact items vertically */
@@ -740,14 +708,16 @@ p {
     }
     
   }
-  @media (max-width: 600px) {
+  @media (max-width: 680px) {
 	.contact.container {
-	  flex-direction: column; /* Stack contact items vertically */
-	
+	  flex-direction: column; 
+	}
+	.contacto{
+		margin-top: 25px;
 	}
 
 	#map-container {
-		margin-top: -50px; /* Adjust the height for smaller screens */
+		margin-top: -20px; /* Adjust the height for smaller screens */
 	  }
 	  #map{
 		height: 300px;
@@ -766,7 +736,9 @@ p {
 		.contact-info {
 		  margin-top: 10px;
 		}
-	  
+	  .contacto{
+		margin-top: 25px;
+	  }
 		.contact-items {
 		  display: flex;
 		  flex-direction: column;
