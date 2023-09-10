@@ -34,7 +34,7 @@
     <div class="header container">
       <div class="nav-bar">
 <label class="logoo">
-  <a href="#hero"><img class="scroll-logo" src="img.icon/Datacor.png" alt=""></a>
+  <a href="#hero"><img class="scroll-logo" src="img.icon/Datacor01.png" alt="logo"></a>
 </label>
 
         <div class="nav-list">
@@ -56,16 +56,38 @@
 
   <!-- End Header -->
 <!-- partial:index.partial.html -->
-<section id="top">
-  <img src="img/bg.jpg" class="bg" />
-  <h2 class="text">Contact info</h2>
-  <!--<img src="img/man.png" class="man" />-->
-  <img src="img/clouds_1.png" class="clouds_1" />
-  <img src="img/clouds_2.png" class="clouds_2" />
-  <img src="img/mountain_left.png" class="mountain_left" />
-  <img src="img/mountain_right.png" class="mountain_right" />
-</section>
 
+<section class="contacto" id="contacto">
+  <div class="contenido-contacto">
+      <div class="informacion-contacto">
+          <h3>Informacion de contacto</h3>
+         <p>cordilleradatascience@gmail.com</p>
+          <p>+51 999365216</p>
+      </div>
+      
+      <form id="form" class="formulario-contacto">
+        <h3>Solicita tu cotización</h3>
+          <div class="input-contacto">
+              <label for="from_name">Nombre</label>
+              <input type="text" id="from_name" placeholder="Pedro Perez">
+          </div>
+          <div class="input-contacto">
+              <label for="email_id">Correo</label>
+              <input type="email" name="email_id" id="email_id" placeholder="example@example.com">
+          </div>
+          <div class="input-contacto">
+            <label for="message">Mensaje</label>
+            <input type="text" id="message" name="message" >
+        </div> 
+        <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
+          <div class="input-contacto">
+              <input type="submit" id="button" value="Enviar" >
+          </div>
+      </form>
+  </div>
+
+
+</section>
 
 <!-- partial -->
 
@@ -80,23 +102,23 @@
     </div>-->
     <div class="contact-items">
       <div class="contact-item">
-        <div class="icon"><img src="img.icon/phone.png" /></div>
+        <div class="icon"><img src="img.icon/phone.png" alt="TELEFONO"/></div>
         <div class="contact-info">
-          <h1>Phone</h1>
+          <h1>Teléfono</h1>
           <h2>+51 999365216</h2>
         </div>
       </div>
       <div class="contact-item">
-        <div class="icon"><img src="img.icon/email.png" /></div>
+        <div class="icon"><img src="img.icon/email.png" alt="CORREO" /></div>
         <div class="contact-info">
-          <h1>Email</h1>
+          <h1>Correo Electrónico</h1>
           <h2>cordilleradatascience@gmail.com</h2>
         </div>
       </div>
       <div class="contact-item">
-        <div class="icon"><img src="img.icon/address.png" /></div>
+        <div class="icon"><img src="img.icon/address.png" alt="ubicación"/></div>
         <div class="contact-info">
-          <h1>Address</h1>
+          <h1>Dirección</h1>
           <h2>Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú</h2>
         </div>
       </div>
@@ -119,37 +141,7 @@
 
 <!-- End Contact Section -->
 
-<section class="contacto" id="contacto">
 
-  <h2>escribanos</h2>
-  <div class="contenido-contacto">
-      <div class="informacion-contacto">
-          <h3>Información de contacto</h3>
-          <p>cordilleradatascience@gmail.com</p>
-          <p>+51 999365216</p>
-      </div>
-      <form id="form" class="formulario-contacto">
-          <div class="input-contacto">
-              <label for="from_name">Nombre</label>
-              <input type="text" id="from_name" placeholder="Pedro Perez">
-          </div>
-          <div class="input-contacto">
-              <label for="email_id">Correo</label>
-              <input type="email" name="email_id" id="email_id" placeholder="example@example.com">
-          </div>
-          <div class="input-contacto">
-            <label for="message">Mensaje</label>
-            <input type="text" id="message" name="message" >
-        </div> 
-        <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
-          <div class="input-contacto">
-              <input type="submit" id="button" value="Enviar" >
-          </div>
-      </form>
-  </div>
-
-
-</section>
   
 <!--footer-->
 <section id="footer">
@@ -160,25 +152,27 @@
     <h2>Your Complete Web Solution</h2>
     <div class="social-icon">
       <div class="social-item">
-        <a href="#"><img src="img.icon/facebook-new.png" /></a>
+        <a href="https://www.facebook.com/Cordilleradata"><img src="img.icon/facebook-new.png" alt="Facebook" /></a>
       </div>
       <div class="social-item">
-        <a href="#"><img src="img.icon/instagram.png" /></a>
+        <a href="https://instagram.com/cordilleradata?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img src="img.icon/instagram.png" alt="instagram" /></a>
       </div>
-      <div class="social-item">
-        <a href="#"><img src="img.icon/twitter.png" /></a>
-      </div>
-      <div class="social-item">
-        <a href="#"><img src="img.icon/behance.png" /></a>
-      </div>
+        <!--<div class="re">
+          <a href="#"><img src="img.icon/twitter.png" alt="twitter" /></a>
+        </div>
+        <div class="re">
+          <a href="#"><img src="img.icon/behance.png" alt="behance" /></a>
+        </div>-->
     </div>
-    <p>Copyright © 2020 Arfan. All rights reserved</p>
+    <p>&copy; 2023 Datacor. Todos los derechos reservados.</p>
   </div>
-  
+</section>
 
 
   
   <!-- End Footer -->
+
+  
 
 <script  src="js/cursor.js"></script>
   <script>
@@ -277,6 +271,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
                 }
               });
             </script>--> 
+
 
 </body>
 

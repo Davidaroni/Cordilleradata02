@@ -1,5 +1,4 @@
 
-  
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;
@@ -32,7 +31,7 @@
 }
   
 
-body{
+body{ 
     font-size: 1.6rem;
 	background-color:#ffffff;
 	
@@ -72,6 +71,7 @@ p {
 	line-height: 2.5rem;
 	font-weight: 300;
 	letter-spacing: 0.05rem;
+	text-align: justify;
 }
 .section-title {
 	font-size: 4rem;
@@ -110,36 +110,55 @@ p {
 }
 
 .logo img{
-	width:175px ;
-	height: 150px ;
+	width:95px ;
+	height: 11vh ;
 }
-@media (max-width: 768px) {
-    .logo img{
-		width:105px ;
-		height: 100px ;
-    }
-	.logo{
-		margin-top: 2%;
+@media (max-width: 767px) {
+	.logo {
+	  text-align: center; /* Centra el logotipo */
 	}
-}
+	
+	.logo a {
+	  display: block; /* Convierte el enlace en un bloque para que ocupe el ancho completo */
+	}
+  
+	.logo img {
+	  max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+	  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+	}
+  }
+  @media (max-width: 1200px) {
+	.logo {
+	  text-align: center; /* Centra el logotipo en tablet */
+	}
+  
+	.logo img {
+	  max-width: 100%; /* Ajusta el ancho máximo del logotipo al 100% del contenedor */
+	  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+	}
+  }
+  
 
 /* Header section */
 #header {
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: auto;
-	
+    position: fixed; /* O sticky si prefieres que se quede fijo solo mientras te desplazas */
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+
 }
+
+
 #header .header {
 	min-height: 8vh; 
-	background-color: #485563;
+	background-color: #ffffff;
 	transition: 0.3s ease background-color;
-	
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 #header .nav-bar {
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -153,7 +172,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-    background-color: rgb(8, 8, 8);
+	background-color: rgb(31, 30, 30);
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -167,16 +186,7 @@ p {
 	transition: 0.5s ease left;
   }
   
-  #header .nav-list ul::before {
-	content: "";
-	position: absolute;
-	width: 72%;
-	height: 10%;
-	margin-top: 17px;
-	background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
-	z-index: -1;
-	opacity: 0.8;
-  }
+ 
   
 
 #header .nav-list ul.active {
@@ -184,10 +194,10 @@ p {
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
-	
+	font-weight: 500;
 	letter-spacing: 0.1rem;
 	text-decoration: none;
-	color: rgb(255, 254, 254);
+	color: rgb(52, 106, 168);
 	text-transform: uppercase;
 	padding: 15px;
 	display: block;
@@ -283,7 +293,8 @@ p {
 	background-position:  center;
 	position: relative;
 	z-index: 1;
-	height: 75vh;
+	height: 69vh;
+	margin-top: 8vh;
 }
 #hero::after {
 	content: '';
@@ -359,184 +370,164 @@ p {
 
 
 
-main {
-    width: 100%;
-    height: 100vh;
-    box-shadow: 0 16px 18px rgba(22, 35, 43, 0.19);
-    transform: rotate(0);
-}
-.bg {
-    width: 100%;
-    height: 100%;
+#container-slider
+{
     position: relative;
-    overflow: hidden;
-}
-.bg-main {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.bg-main-img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-image: var(--img);
-    background-size:cover;
-    background-position: center;
-}
-
-.bg-circle-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 90vh;
-    z-index: 10;
-}
-
-.bg-circle {
-    width: 20vmin;
-    height: 20vmin;
-    overflow: hidden;
-    clip-path: circle(10vmin at center);
-}
-
-.bg-circle-img {
-    width: 100%;
-    height: 100%;
-    clip-path: circle(10vmin at center);
-    position: relative;
-    transform: rotate(0);
-}
-
-.bg-circle-img::after {
-    content: "";
-    position:fixed;
-    width: 85vw;
-    height: 80vh;
     display: block;
-    background-image: var(--img);
-    top: calc(-40vh + 16vmin);
-    left: calc(-85vw / 2 + 16vmin);
+    width: 100%;
+}
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 10vh;
+    min-height: 500px;
+	margin-top: 8vh;
+}
+#slider li {
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-
-main::after {
-    content: "";
-    position: relative;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    /*background: rgba(39, 108, 190, 0.33);*/
-    mix-blend-mode: normal;
-    z-index: 20;
-}
-
-.btns {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: fit-content;
-    z-index: 999;
-    mix-blend-mode: exclusion;
-    transition-duration: 0.6s;
-}
-
-.btns.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-
-.arrow {
     display: block;
-    width: 2vmax;
-    height: 1vmax;
-    border: none;
-    background: url("data:image/svg+xml,%3Csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L7 1L13 6' stroke='%23EAE3CF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center;
-    background-size: 100%;
-    margin: 0.5vmax 0;
-    padding: 1vmax 0;
-    transition-duration: 0.3s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: -1;
+    opacity: 0;
 }
-
-.arrow.next {
-    transform: rotate(180deg);
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 30pt;
+    color: rgba(204, 204, 204, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    z-index: 2;
 }
-
-.arrow.next:hover {
-    transform: rotate(180deg) translateY(-4px);
+#container-slider .arrowNext {
+    left: initial;
+    right: 50px !important;
 }
-
-.arrow.prev:hover {
-    transform: translateY(-4px);
-}
-
-.text {
-    color: rgba(255, 255, 255, 0.65);
-    position: static;
-    bottom: 0.4em;
-    font-size: 0.85em;
+.content_slider{
+    padding: 15px 30px;
+    color: #FFF;
     width: 100%;
-    z-index: 999;
-    text-shadow: 1px 1px 0 #75757547;
-	max-width: 1200px;
-	margin: -320px auto 0 -10px;
-	padding: 0 50px;
-	justify-content: flex-start;
-  	left: 20px; 
-	top: 60%; 
-	transform: translateY(-50%); 
+    height: 100%;
 }
+.content_slider div{
+    text-align: center;
+}
+.content_slider h2{
+    font-family: 'arial';
+    font-size: 30pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.content_slider p {
+    font-size: 15pt;
+    font-family: 'arial';
+    color: #FFF;
+    margin-bottom: 20px;
+}
+#slider li .content_slider{
+    background: rgba(0, 0, 0, 0.50);
+    padding: 10px 125px;
+}
+.content_slider{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnSlider{
+    color: #FFF;
+    font-size: 15pt;
+    font-family: 'arial';
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    border: 1px solid #CCC;
+    background: rgba(37, 40, 80, 0.55);
+    border-radius: 31px;
+    text-decoration: none;
+    transition: .5s all;
+}
+.btnSlider:hover{
+    background: #111;
+    border: 1px solid #111;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item-select-slid {
+    background: #FFF  !important;
+}
+@media screen and (max-width: 460px){
+	.content_slider h2 {
+	    font-size: 15pt !important;
+	}
+	.content_slider p {
+	    font-size: 12pt !important;
+	}
+	#container-slider .arrowPrev, #container-slider .arrowNext{
+		font-size: 20pt;
+	}
+	#container-slider .arrowPrev{
+		left: 15px;
+	}
+	#container-slider .arrowNext{
+		right: 15px !important;
+	}
+	#slider{
+		height: 530px;
+		min-height: 400px;
+	
+	}
+	#slider li .content_slider{
+		padding: 10px 35px;
+	}
+	.btnSlider{
+		padding: 10px 30px;
+    	font-size: 10pt;
+	}
 
-.text h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
 }
-.text h1:nth-child(1) {
-	animation-delay: 1s;
-}
-.text h1:nth-child(2) {
-	animation-delay: 2s;
-}
-.text h1:nth-child(3) {
-	animation: text_reveal_name 0.5s ease forwards;
-	animation-delay: 3s;
-}
-.text h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: crimson;
-	animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
-}
-.text h1:nth-child(1) span {
-	animation-delay: 0.5s;
-}
-.text h1:nth-child(2) span {
-	animation-delay: 1.5s;
-}
-.text h1:nth-child(3) span {
-	animation-delay: 2.5s;
-}
-
-
 
 
 
@@ -562,10 +553,29 @@ main::after {
 #about .col-left {
 	width: 250px;
 	height: 360px;
+	margin-top: -25px;
 }
-#about .col-right {
+#about .col-righ {
 	width: 100%;
+	margin-top: -25px;
 }
+
+#about .col-righ h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	margin-bottom: 10px;
+}
+#about .col-righ p {
+	margin-bottom: 20px;
+}
+#about .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+
 #about .col-right h2 {
 	font-size: 1.8rem;
 	font-weight: 500;
@@ -604,6 +614,10 @@ main::after {
 
 /*why work with DATACOR*/
 
+#work{
+	margin-top: -65px;
+}
+
 #work2{
 	margin-top: -200px;
 }
@@ -635,7 +649,7 @@ main::after {
     float: left;
     width: 300px;
     height: auto;
-	margin: 10px 85px 25px -85px; 
+	margin: 36px 85px 25px -85px; 
     shape-outside: circle();
 }
 
@@ -704,6 +718,7 @@ main::after {
 		align-items: center;
 		margin-left: 50px;
 	}
+
 }
 /* end why work with DATACOR*/
 
@@ -855,6 +870,7 @@ main::after {
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
+	margin-top: 40px;
 }
 #services .service-top {
 	max-width: 500px;
@@ -913,7 +929,7 @@ main::after {
 }
 /* End Services Section */
 /*services secction 2*/
-.servicio-title {
+.dos {
 	margin-top: -150px; 
   }
   
@@ -996,10 +1012,10 @@ main::after {
 	max-width: 500px;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 800px;
+	margin-top: -700px;
 }
 #projects .projects-header {
-	margin-top: 780px;
+	margin-top: 635px;
 }
 
 #projects .projects {
@@ -1100,11 +1116,12 @@ main::after {
 		  width: 100%;
 		  border-radius: 5%;
 		}
-		#projects{
-			margin-top: -900px;
+		#projects .projects-header{
+			margin-top: -150px;
 		}
 		#projects .projects-header p{
 			font-size: 1.3rem;
+			margin-top: -30px;
 		}
 		#projects .project-info {
 		  padding: 12px;
@@ -1133,6 +1150,7 @@ main::after {
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
 		text-align: center;
+		margin-top: -150px;
 	}
 	.titlee .tarjeta-titulo span {
 		color:crimson;
@@ -1454,6 +1472,7 @@ main::after {
 	padding-top: 50px;
 	padding-bottom: 10px;
 }
+
 #footer h2 {
 	color: white;
 	font-weight: 500;
@@ -1486,7 +1505,88 @@ main::after {
 
 /* End Footer */
 
+/*footer2*/
+footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+   
+}
 
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-container h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.social-media h2{
+	margin-right: -12px;
+}
+
+.social-media {
+display: flex;
+padding: 20px;
+box-sizing: border-box;
+flex-direction: row;
+
+}
+.re {
+
+	height: 50px;
+	width: 50px;
+	margin: 35px 5px 0px;
+}
+.re a{
+	margin: 0 -80px;
+	text-decoration: none;
+}
+
+.footer-container .re img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+.footer-container .re:hover img {
+	filter: grayscale(0);
+}
+
+.footer-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.footer-container p {
+    margin: 0;
+    color: white;
+	font-size: 1.3rem;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.footer-container .copyright {
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+/*end footer2*/
 
 /*----------------------------------------------------------------------*/
 
@@ -1594,7 +1694,7 @@ main::after {
 	  font-size: 2rem;
 	  line-height: 2.5rem;
 	}
-	
+
 	.opinions-item {
 	  margin-bottom: 30px;
 	}
@@ -1611,8 +1711,12 @@ main::after {
 		.work-top {
 		  text-align: center;
 		}
+
+		#about .col-righ{
+			margin-top: -100px;
+		}
 		#about{
-			margin-top: -50px;
+			margin-top: 50px;
 		}
 		.section-title {
 		  font-size: 1.8rem;
@@ -1631,7 +1735,7 @@ main::after {
 		  margin: 10px 0;
 		}
 		#work{
-			margin-top: -40px;
+			margin-top: -50px;
 		}
 	  }
 	  	/* end why work with DATACOR*/
@@ -1752,7 +1856,7 @@ main::after {
 	/* About */
 
 	#about{
-		margin-top: -80px;
+		margin-top: -25px;
 	}
 	#about .about {
 		flex-direction: row;
@@ -1762,6 +1866,7 @@ main::after {
 		width: 600px;
 		height: 400px;
 		padding-left: 60px;
+
 	}
 	#about .about .col-left .about-img::after {
 		left: -45px;
@@ -1773,6 +1878,7 @@ main::after {
 	#about .col-right {
 		text-align: left;
 		padding: 30px;
+		margin-top: -38px;
 	}
 	#about .col-right h1 {
 		text-align: left;
@@ -1826,7 +1932,7 @@ main::after {
 @media (max-width: 768px) {
 	/* Servie section 2*/
 	.dos{
-		margin-top: -150px;
+		margin-top: -180px;
 	}
 	.flip-card-front h2{
 		font-size: 1.6rem;
@@ -1869,9 +1975,11 @@ main::after {
 
 
 
+
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
 	/* header */
+
 	#header .hamburger {
 		display: none;
 	}
@@ -1899,3 +2007,7 @@ main::after {
 	}
 }
 /* End  Media Query For Desktop */
+
+
+
+
