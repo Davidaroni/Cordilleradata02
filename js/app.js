@@ -137,7 +137,7 @@ $(function(){
         $(".nav-list li:eq(4) a").text("Plan estrategico");
         $(".nav-list li:eq(5) a").text("Contacto");
         $(".language-selected").text("es");
-        $(".language-selected").removeClass("change-en8*")
+        $(".language-selected").removeClass("change-en")
         $(".language-selected").addClass("change-es");
         //section
     // Cambiar el texto dentro del <h1>
