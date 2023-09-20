@@ -1,7 +1,160 @@
+:root{
+    --bg-color: rgb(255, 208, 0);
+    --container-bg-color: #fff;
+    --facebook-color:#1778F2;
+    --twitter-color:#1Da1f2;
+    --whatsapp-color:#25D366;
+    --youtube-color:#f00;
+	--linkedin-color: #0077b5; /* Color de LinkedIn personalizado */
+	--instagram-color: #bc2a8d; /* Agregar el color de Instagram aquí */
+    --container-shadow:2.3px 2.3px 1.9px rgba(0, 0, 0, 0.035),5.4px 5.4px 4.3px rgba(0, 0, 0, 0.048),9.7px 9.7px 7.7px rgba(0, 0, 0, 0.054),16.1px 16.1px 12.8px rgba(0, 0, 0, 0.057),26.5px 26.5px 21.2px rgba(0, 0, 0, 0.062),46.2px 46.2px 37px rgba(0, 0, 0, 0.073),100px 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.iq img{
+	height:25px ;
+	width: 25px;
+}
+
+
+.social-icon-list{
+display:grid;
+border: 1px solid #000; 
+position: fixed;
+grid-template-columns: repeat(1fr);
+border-radius: 20px;
+height: 250px;
+width: 150px;
+bottom: 60px;
+right: 20px;
+background-color: #fff;
+padding: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+justify-items: center;
+align-items: center;
+padding: 0 20px;
+/*box-shadow: var(--container-shadow);*/
+background-color: var(--container-bg-color);
+}
+
+.iq .icon-group{
+    height: 40px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    transition: all 1s ease;
+
+}
+
+.iq .icon-group:hover{
+    width: 120px;
+    justify-content: space-around;
+}
+.iq:nth-child(1) .icon-group {
+    border: 2px solid var(--facebook-color);
+}
+.iq:nth-child(2) .icon-group{
+    border: 2px solid var(--linkedin-color);
+	
+}
+
+.iq:nth-child(3) .icon-group {
+    border: 2px solid var(--instagram-color);
+}
+
+.iq:nth-child(4) .icon-group {
+    border: 2px solid var(--youtube-color);
+}
+
+.iq .icon-group:hover img,
+.icon-group:hover .icon-text{
+    color: #fff;
+}
+
+
+.iq .icon-group .icon-text{
+    width: 0;
+    overflow: hidden;
+}
+
+.iq .icon-group:hover .icon-text{
+    width: fit-content;
+    transition: width 1s ease;
+}
+
+.iq .icon-group img,
+.icon-group .icon-text{
+    z-index: 2;
+}
+.iq .icon-group .twitter,
+.icon-group .icon-text{
+    z-index: 2;
+}
+
+.iq .icon-group .icon-bg{
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    border-radius: 10px;
+    clip-path: circle(50% at -100% 50%);
+    z-index: 1;
+}
+
+.iq .icon-group:hover .icon-bg{
+    clip-path: circle(160% at 10% 60%);
+    transition: all 1s ease;
+}
+
+.iq:nth-child(1) .icon-group .icon-bg{
+    background-color: var(--facebook-color);
+}
+.iq:nth-child(2) .icon-group .icon-bg{
+    background-color:  var(--linkedin-color);
+}
+
+.iq:nth-child(3) .icon-group .icon-bg{
+    background-color:  var(--instagram-color);
+}
+
+.iq:nth-child(4) .icon-group .icon-bg{
+    background-color:  var(--youtube-color);
+}
+
+.iq{
+	text-decoration: none;
+}
 
 
 
-
+/* Estilo base del botón */
+.floating-button {
+	position: fixed;
+	bottom: 17px;
+	right: 20px;
+	background-color: #007bff; 
+	color: #fff; 
+	padding: 10px 20px; 
+	border-radius: 50px; 
+	cursor: pointer; 
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, transform 0.3s; 
+  }
+  
+  /* Estilo cuando se pasa el ratón por encima */
+  .floating-button:hover {
+	background-color: #012c5a; 
+	transform: scale(1.05); 
+  }
+  
+  /* Estilo para el texto dentro del botón */
+  .floating-button span {
+	font-size: 14px; 
+	font-weight: bold; 
+  }
+  
+/*JSON LNEAGUAGE*/
 .language{
     position: relative;
     width:120px ;
@@ -450,9 +603,6 @@ p {
 	animation-delay: 2.5s;
 }
 
-
-
-
 @keyframes spin {
     from {
         transform: rotate(0);
@@ -466,7 +616,7 @@ p {
 
 #container-slider
 {
-    position: relative;
+    position: sticky;
     display: block;
     width: 100%;
 }
@@ -876,7 +1026,7 @@ p {
 }
   
 .card-content p {
-    font-size: 16px;
+    font-size: 12.5px;
     margin-bottom: 20px;
 	color: #ffffff;
 }
@@ -1161,6 +1311,9 @@ p {
 #projects .project-info p {
 	color: white;
 }
+#projects .project-info .linea {
+	margin: 7px 0;
+}
 #projects .project-img {
 	flex-basis: 50%;
 	height: 300px;
@@ -1221,15 +1374,20 @@ p {
 		  padding: 12px;
 		}
 		#projects .all-projects .project-info h2 {
-			font-size: 1.8rem;
+			font-size: 1.2rem;
 			text-transform: uppercase;
 			font-weight: bold;
 		}
 		#projects .all-projects .project-info h3 {
 			font-size: 1.3rem;
 		}
-		#projects .all-projects .project-info p {
-			font-size: 1.1rem;
+		#projects .all-projects .project-info .pa {
+			font-size: 7.5px;
+			
+		}
+		#projects .all-projects .project-info .linea {
+			font-size: 7.5px;
+			margin: 12px 0;
 		}
 	  }
 

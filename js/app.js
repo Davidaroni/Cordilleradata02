@@ -92,6 +92,17 @@ $(function(){
         $(".language-selected").text("en-US");
         $(".language-selected").removeClass("change-es")
         $(".language-selected").addClass("change-en");
+        //SLIDER
+
+        $(".content_slider p").text("Advertising, marketing, market studies and project formulation");
+        $("#slider .lane2").text("Advertising with web pages and social networks");
+        $("#slider .lane3").text("Preparation of market research");
+        $("#slider.lane4").text("Strategic plan for companies and project development");
+        $(".btnSlider ").text("to access"); 
+
+        //FLOAT BUTTON SOCIAL NETWORKS
+        $(".floating-button span").text("Social Networks");
+
         //section
         // Cambiar el texto dentro del <h1>
         var sectionTitle = $(".col-righ .section-title");
@@ -139,6 +150,18 @@ $(function(){
         $(".language-selected").text("es");
         $(".language-selected").removeClass("change-en")
         $(".language-selected").addClass("change-es");
+
+        //SLIDER
+
+        $(".content_slider p").text("Publicidad, marketing, estudios de mercado y formulación de proyectos");
+        $("#slider .lane2").text("Publicidad con páginas web y redes sociales");
+        $("#slider .lane3").text("Elaboración de investigación de mercados");
+        $("#slider .lane4").text("Plan estratégico para empresas y elaboración de proyectos");
+        $(".btnSlider").text("Acceder");
+        
+        //Redes Sociales boton flotante
+        $(".floating-button span").text("Redes Sociales");
+
         //section
     // Cambiar el texto dentro del <h1>
     var sectionTitle = $(".col-righ .section-title");
@@ -159,14 +182,27 @@ $(function(){
           }).first().replaceWith("¿por que trabajar con ");
           $(".work-top p").text("Trabajamos sobre la base del marketing: Evaluamos el producto o servicio, el mercado y la promoción y publicidad. Contamos con profesionales de la informática, diseñadores gráficos. Redactores bilingües en español e inglés. Canales masivos en redes sociales para el soporte de la publicidad. Tenemos experiencia y personal para la elaboración de investigación de mercado. Elaboración de cuestionarios de encuesta, muestreo y recopilación de la información a nivel nacional");
           $(".direccion").text("DIRECCIÒN: Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú")
-          $(".telefono").text("TELÈFONO: +51 999365216")
-          $(".correo").text("CORREO: cordilleradatascience@gmail.com")
-          $(".contact-info h2").text("contacto")
-          $(".social-media h2").text("siguenos")
+          $(".telefono").text("TELÈFONO: +51 999365216");
+          $(".correo").text("CORREO: cordilleradatascience@gmail.com");
+          $(".contact-info h2").text("contacto");
+          $(".social-media h2").text("siguenos");
           $(document).ready(function() {
             var nuevoContenido = "&copy; 2023 Datacor. Todos los derechos reservados.";
             $(".copyright p").html(nuevoContenido);
         });
         
     });
+});
+
+// script.js
+
+const socialButton = document.getElementById('social-button');
+const socialContainer = document.getElementById('social-container');
+
+socialButton.addEventListener('click', () => {
+    if (socialContainer.style.display === 'grid') {
+        socialContainer.style.display = 'none';
+    } else {
+        socialContainer.style.display = 'grid';
+    }
 });

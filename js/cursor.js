@@ -96,17 +96,23 @@ $(function(){
          "specific to publicize the existence, characteristics, details, qualities, benefits, opinions.\n"+
           "and sentiments of certain products, services and events. For commercial purposes.");
           //elaboracion de paginas web
-          $(".flip-card-front .menu-title").text("Preparation of web pages");
-          $(".card-content parrafo").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title").text("Advertising web pages");
+          $(".card-content .parrafo").text("Web pages for companies, aimed at generating sales on the internet; About the marketing concept, for this:n"+
+          "The product or service is evaluated, consumers and market segment demanders are identified and presentedn"+
+          "The images, features, benefits and references of the product, the trust and guarantee offered by the company.n"+
+          "Finally the customer is convinced to call and order the purchase to finalize the sale.");
           //posicionamiento de negocios
-          $(".flip-card-front .menu-title1").text("business of positioning");
-          $(".card-content parrafo1").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title1").text("Optimization of ads in search engines such as Google");
+          $(".card-content .parrafo1").text("Ads and web pages in the first places of search engines such as google, through a correct web design;n"+
+          "with the generation of Keywords, tagging, elaboration of own content,n"+
+          "relevant and personalized with Rich Snippets. So search engines,n"+
+          "It offers the right product to a consumer looking to fill a need.");
           //creacion de videos para youtube
           $(".flip-card-front .menu-title2").text("video creation for youtube");
-          $(".card-content parrafo2").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".card-content .parrafo2").text("Creation of audiovisual ads or institutional videos for Youtube. Social networks or web pages. The videos are adapted to be broadcast at the same time as podcasts, audiobooks or FM radios or other means of auditory advertising.");
           //creacion de sitios empresariales
-          $(".flip-card-front .menu-title3").text("creation of business sites");
-          $(".card-content parrafo3").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title3").text("Creation and management of sites and accounts in social networks");
+          $(".card-content .parrafo3").text("We create accounts and sites on social media pages such as: Google Business, Facebook, Instagram and LinkedIn. In addition, we manage dissemination and advertising campaigns on these social networks.");
       //secction 2
       var sectionTitle = $(".service-top .section-title1");
       sectionTitle.contents().filter(function() {
@@ -114,13 +120,16 @@ $(function(){
       }).first().replaceWith("advertising ");
 
       $(".service-top .section-title1 span").text("radio");
-      $(".service-top .radio").text("FM radio was born before television and the internet and will not lose its validity because it only needs the sense of hearing and accompanies the public during work and transit hours. This is why we offer services of:");
+      $(".service-top .radio").text("FM radio. It was born before television and the Internet and does not and will not lose its validity, because it only needs the sense of hearing,.n"+
+      "and accompanies the public in hours of work, transit and travel. n"+
+      "FM radio. It is currently complemented by TV channels and internet broadcasts. It is a massive channel of advertising and propaganda with arrival.. n"+
+      "to various market segments.");
                //elaboraciòn de publicidad radial
-               $(".flip-card-front .menu-title4").text("preparation of radio advertising");
-               $(".card-content parrafo4").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+               $(".flip-card-front .menu-title4").text("Development of radio advertising");
+               $(".card-content .parrafo4").text("We elaborate audio announcements 'Spots', 'Spots' to be broadcast through FM radios. local or national. You can download the models of advertisements or radio spots.");
                //produccion e emision radial
-               $(".flip-card-front .menu-title5").text("radio production and broadcast");
-               $(".card-content parrafo5").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+               $(".flip-card-front .menu-title5").text("Production of radio programs");
+               $(".card-content .parrafo5").text("We produce radio programs for advertising opinion or political propaganda. The production can be live or recorded programs that can be broadcast by other means such as the internet.");
 
                
          //SECTION CONTACT FORMULACION
@@ -193,17 +202,23 @@ $(function(){
          "específico para dar a conocer la existencia, caracteristicas, detalles, cualidades, beneficios, opiniones.\n"+
           "y sentimientos de ciertos productos, servicios y eventos. Con fines comerciales.");
           //elaboracion de paginas web
-          $(".flip-card-front .menu-title").text("Elaboración de paginas web");
-          $(".card-content parrafo").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title").text("Paginas web publicitarias");
+          $(".card-content .parrafo").text("Páginas web para empresas, orientadas a generar ventas en internet; sobre el concepto de márquetin, para esto:\n"+
+          "se evalúa el producto o servicio, se identifica a los consumidores y demandantes segmento de mercado y se presentan\n"+
+          "las imágenes, características, beneficios y referencias del producto, la confianza y garantía que ofrece la empresa.\n"+
+          "Finalmente se convence al cliente a que llame y ordene la compra para concretar la venta.");
           //posicionamiento de negocios
-          $(".flip-card-front .menu-title1").text("posicionamiento de negocios");
-          $(".card-content parrafo1").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title1").text("Optimización de anuncios en buscadores como Google");
+          $(".card-content .parrafo1").text("Anuncios y páginas web en los primeros lugares de buscadores como google, mediante un correcto diseño web;\n"+
+          "con la generación de Keywords (Palabras clave), etiquetado, elaboración de contenido propio,\n"+
+          "relevante y personalizado con Rich Snippets (Fragmentos enriquecidos). De manera que los motores de búsqueda,\n"+
+          "le ofrece el producto preciso a un consumidor que busca satisfacer una necesidad.");
           //creacion de videos para youtube
           $(".flip-card-front .menu-title2").text("creaciòn de videos para youtube");
-          $(".card-content parrafo2").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".card-content .parrafo2").text("Creación de anuncios audiovisuales o vídeos institucionales para Youtube. Redes sociales o páginas web. Los vídeos están adaptados para ser difundidos a la vez como podcast, audiolibros o radios FM u otros medios de publicidad auditiva.");
           //creacion de sitios empresariales
-          $(".flip-card-front .menu-title3").text("creaciòn de sitios empresariales");
-          $(".card-content parrafo3").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+          $(".flip-card-front .menu-title3").text("Creación y gestión de sitios y cuentas en redes sociales");
+          $(".card-content .parrafo3").text("Creamos cuentas y sitios en páginas de redes sociales como: Google Business, Facebook Instagram y LinkedIn. Además, gestionamos campañas de difusión y publicidad en estas redes sociales.");
       //seccion 2
                    // Cambiar el texto dentro del <h1>
          var sectionTitle = $(".service-top .section-title1");
@@ -211,14 +226,18 @@ $(function(){
              return this.nodeType === 3; // Filtrar nodos de texto
          }).first().replaceWith("publicidad ");
          $(".service-top .section-title1 span").text("radial");
-         $(".sevice-top .radio").text("La radio FM nació antes de la televisión y el internet y no perderá su vigencia por que solo necesita el sentido de la audición y acompaña al publico en horas de trabajo y tránsito. Por esto ofrecemos servicios de:");
+         $(".service-top .radio").text("La radio FM. nació antes de la televisión y el internet y no pierde ni perderá su vigencia, porque solo necesita el sentido de la audición,\n"+
+         "y acompaña al público en horas de trabajo, tránsito y viaje.\n"+
+         "La radio FM. Actualmente se complementa con canales de Tv y emisiones por internet. Es un canal masivo de publicidad y propaganda con llegada.\n"+
+         "a varios segmentos de mercado.");
          //elaboraciòn de publicidad radial
          $(".flip-card-front .menu-title4").text("elaboraciòn de publicidad radial");
-         $(".card-content parrafo4").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+         $(".card-content .parrafo4").text("Elaboramos anuncios de audio 'Cuñas', 'Spots' para ser difundidos mediante las radios FM. locales o nacionales. Usted puede descargar los modelos de anuncios o spots radiales.");
          //produccion e emision radial
-         $(".flip-card-front .menu-title5").text("producción y emision radial");
-         $(".card-content parrafo5").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, eros at posuere fringilla, turpis tortor efficitur velit, at fringilla tortor magna id quam.");
+         $(".flip-card-front .menu-title5").text ("Producción de programas radiales");
+         $(".card-content .parrafo5").text("Producimos programas radiales para publicidad opinión o propaganda política. La producción puede ser en vivo o programas grabados que se pueden difundir.por otros medios como internet.");
 
+         
          //SECTION CONTACT FORMULACION
 
          $(".informacion-contacto .info").text("informaciòn de contacto");
