@@ -1,4 +1,312 @@
+:root{
+    --bg-color: rgb(255, 208, 0);
+    --container-bg-color: #fff;
+    --facebook-color:#1778F2;
+    --twitter-color:#1Da1f2;
+    --whatsapp-color:#25D366;
+    --youtube-color:#f00;
+	--linkedin-color: #0077b5; /* Color de LinkedIn personalizado */
+	--instagram-color: #bc2a8d; /* Agregar el color de Instagram aquí */
+    --container-shadow:2.3px 2.3px 1.9px rgba(0, 0, 0, 0.035),5.4px 5.4px 4.3px rgba(0, 0, 0, 0.048),9.7px 9.7px 7.7px rgba(0, 0, 0, 0.054),16.1px 16.1px 12.8px rgba(0, 0, 0, 0.057),26.5px 26.5px 21.2px rgba(0, 0, 0, 0.062),46.2px 46.2px 37px rgba(0, 0, 0, 0.073),100px 100px 80px rgba(0, 0, 0, 0.12);
+}
 
+.iq img{
+	height:25px ;
+	width: 25px;
+}
+/* Estilo para la sección */
+.general {
+    position: sticky;
+    height: 60vh; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+	background-size: cover;
+	margin-bottom: 150px;
+	margin-top: -100px;
+}
+  
+  .general:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Opacidad color negro (RGBA) */
+  }
+  
+  .imagen {
+	position: relative;
+	padding: 20px;
+	color: white; /* Color del texto */
+  }
+
+/* Estilo para el contenedor de contenido */
+.contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+	
+}
+
+/* Estilo para el botón */
+.movie button {
+	margin-top: 50px;
+	width: 90px;
+	height: 90px;
+	background: linear-gradient(45deg, #FF5733, #022c38);
+	color: #fff;
+	border: none;
+	border-radius: 50%; /* Hace que el botón sea circular */
+	font-size: 15px;
+	position: relative;
+	animation: pulse 1.5s infinite; /* Agrega la animación palpitante */
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease-in-out;
+  }
+ 
+
+  
+  @keyframes pulse {
+	0% {
+	  transform: scale(1); /* Tamaño normal */
+	}
+	50% {
+	  transform: scale(1.1); /* Escalado al 110% del tamaño original */
+	}
+	100% {
+	  transform: scale(1); /* Vuelve al tamaño normal */
+	}
+  }
+  
+
+
+
+.social-icon-list{
+display:none;
+border: 1px solid #000; 
+position: fixed;
+grid-template-columns: repeat(1fr);
+border-radius: 20px;
+height: 250px;
+width: 150px;
+bottom: 60px;
+right: 20px;
+background-color: #fff;
+padding: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+justify-items: center;
+align-items: center;
+padding: 0 20px;
+/*box-shadow: var(--container-shadow);*/
+background-color: var(--container-bg-color);
+}
+
+.iq .icon-group{
+    height: 40px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    transition: all 1s ease;
+
+}
+
+.iq .icon-group:hover{
+    width: 120px;
+    justify-content: space-around;
+}
+.iq:nth-child(1) .icon-group {
+    border: 2px solid var(--facebook-color);
+}
+.iq:nth-child(2) .icon-group{
+    border: 2px solid var(--linkedin-color);
+	
+}
+
+.iq:nth-child(3) .icon-group {
+    border: 2px solid var(--instagram-color);
+}
+
+.iq:nth-child(4) .icon-group {
+    border: 2px solid var(--youtube-color);
+}
+
+.iq .icon-group:hover img,
+.icon-group:hover .icon-text{
+    color: #fff;
+}
+
+
+.iq .icon-group .icon-text{
+    width: 0;
+    overflow: hidden;
+}
+
+.iq .icon-group:hover .icon-text{
+    width: fit-content;
+    transition: width 1s ease;
+}
+
+.iq .icon-group img,
+.icon-group .icon-text{
+    z-index: 2;
+}
+.iq .icon-group .twitter,
+.icon-group .icon-text{
+    z-index: 2;
+}
+
+.iq .icon-group .icon-bg{
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    border-radius: 10px;
+    clip-path: circle(50% at -100% 50%);
+    z-index: 1;
+}
+
+.iq .icon-group:hover .icon-bg{
+    clip-path: circle(160% at 10% 60%);
+    transition: all 1s ease;
+}
+
+.iq:nth-child(1) .icon-group .icon-bg{
+    background-color: var(--facebook-color);
+}
+.iq:nth-child(2) .icon-group .icon-bg{
+    background-color:  var(--linkedin-color);
+}
+
+.iq:nth-child(3) .icon-group .icon-bg{
+    background-color:  var(--instagram-color);
+}
+
+.iq:nth-child(4) .icon-group .icon-bg{
+    background-color:  var(--youtube-color);
+}
+
+.iq{
+	text-decoration: none;
+}
+
+
+
+/* Estilo base del botón */
+.floating-button {
+	position: fixed;
+	bottom: 17px;
+	right: 20px;
+	background-color: #007bff; 
+	color: #fff; 
+	padding: 10px 20px; 
+	border-radius: 50px; 
+	cursor: pointer; 
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, transform 0.3s; 
+  }
+  
+  /* Estilo cuando se pasa el ratón por encima */
+  .floating-button:hover {
+	background-color: #012c5a; 
+	transform: scale(1.05); 
+  }
+  
+  /* Estilo para el texto dentro del botón */
+  .floating-button span {
+	font-size: 14px; 
+	font-weight: bold; 
+  }
+  
+/*JSON LNEAGUAGE*/
+.language{
+    position: relative;
+    width:120px ;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.language-selected{
+    display: flex;
+    align-items: center;
+    color: #ee0000;
+    cursor: pointer;
+}
+.language-selected:before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img.icon/espana.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+/* jQuery class*/
+
+.language-selected.change-en:before{
+    background-image: url(../img.icon/estados-unidos.png);
+}
+.language-selected.change-es:before{
+    background-image: url(../img.icon/espana.png);
+}
+
+.language ul{
+    position: absolute;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    padding-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+    display: none;
+}
+
+.language ul li{
+    list-style: none;
+}
+
+.language ul li a{
+    display: block;
+    color: #252525;
+    padding-top: 5px 10px;
+}
+
+.language ul li:hover{
+    background-color: #f8f8f8;
+}
+
+.language ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+a.es:before{
+    background-image: url(../img.icon/espana.png);
+}
+a.en:before{
+    background-image: url(../img.icon/estados-unidos.png);
+}
+
+
+.language:hover ul{
+    display: block;
+}
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;
@@ -85,6 +393,19 @@ p {
 .section-title span {
 	color: crimson;
 }
+.section-title1 {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title1 span {
+	color: crimson;
+}
+
 
 .cta {
 	display: inline-block;
@@ -104,14 +425,16 @@ p {
 	background-color: crimson;
 }
 
-.logo{
+.logoo{
 	margin-left: 1%;
 
 }
 
-.logo img{
-	width:95px ;
-	height: 11vh ;
+.scroll-logo{
+	
+		width: 100px; /* Tamaño predeterminado del logo para pantallas más pequeñas */
+		height: auto; /* Mantener la proporción de aspecto */
+	  
 }
 @media (max-width: 767px) {
 	.logo {
@@ -356,9 +679,6 @@ p {
 	animation-delay: 2.5s;
 }
 
-
-
-
 @keyframes spin {
     from {
         transform: rotate(0);
@@ -372,7 +692,7 @@ p {
 
 #container-slider
 {
-    position: relative;
+    position: sticky;
     display: block;
     width: 100%;
 }
@@ -402,6 +722,29 @@ p {
     z-index: -1;
     opacity: 0;
 }
+
+#slider li.img1 {
+	background-image: url('../img/job-office-team.png');
+	z-index: 0;
+	opacity: 1;
+	
+  }
+  
+  #slider li.img2 {
+	background-image: url('../img/marketing01.jpg');
+	
+  }
+  
+  #slider li.img3 {
+	background-image: url('../img/Slider3.jpeg');
+
+  }
+  
+  #slider li.img4 {
+	background-image: url('../img/learn-img.jpg');
+
+  }
+  
 #container-slider .arrowPrev, #container-slider .arrowNext{
     font-size: 30pt;
     color: rgba(204, 204, 204, 0.65);
@@ -489,7 +832,7 @@ p {
     margin: 0 5px;
 }
 .listslider li a {
-    background: #CCC;
+    background: #ffffff;
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -498,9 +841,17 @@ p {
 .item-select-slid {
     background: #FFF  !important;
 }
+
+
 @media screen and (max-width: 460px){
 	.content_slider h2 {
 	    font-size: 15pt !important;
+	}
+	.general .empresa {
+	    font-size: 15pt;
+	}
+	#work2{
+margin-top: -80px;
 	}
 	.content_slider p {
 	    font-size: 12pt !important;
@@ -618,9 +969,7 @@ p {
 	margin-top: -65px;
 }
 
-#work2{
-	margin-top: -200px;
-}
+
 #work2 .work{
 	flex-direction: column-reverse;
 	text-align: center;
@@ -764,7 +1113,6 @@ p {
 }
 .flip-card-back {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    color: white;
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
@@ -783,8 +1131,9 @@ p {
 }
   
 .card-content p {
-    font-size: 16px;
+    font-size: 12.5px;
     margin-bottom: 20px;
+	color: #ffffff;
 }
 .services .flip-card {
 	margin-bottom: 20px; /* Puedes ajustar el valor para obtener el espaciado deseado */
@@ -957,17 +1306,23 @@ p {
 	  padding-top: -40px; /* Ajusta el espacio superior */
 	  text-align: center; /* Centra el contenido */
 	}
+	.service-top h2 {
+		font-size: 1.8rem;
+		line-height: 2rem;
+
+	  }
+	  
 
   }
 
 /* research Section */
 #opinions{
-	margin-top: -200px;
+	margin-top: -250px;
 }
 
 #opinions .opinions{
 	flex-direction: row;
-	max-width: 1200px;
+	max-width: 1200px;	
 	margin: 0 auto;
 	width: 100%;
 }
@@ -995,7 +1350,7 @@ p {
 	
 }
 #opinions .opinions-info p {
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	font-weight: 500;
 	margin-bottom: 5px;
 }
@@ -1067,6 +1422,9 @@ p {
 #projects .project-info p {
 	color: white;
 }
+#projects .project-info .linea {
+	margin: 7px 0;
+}
 #projects .project-img {
 	flex-basis: 50%;
 	height: 300px;
@@ -1127,16 +1485,22 @@ p {
 		  padding: 12px;
 		}
 		#projects .all-projects .project-info h2 {
-			font-size: 1.8rem;
+			font-size: 1.2rem;
 			text-transform: uppercase;
 			font-weight: bold;
 		}
 		#projects .all-projects .project-info h3 {
 			font-size: 1.3rem;
 		}
-		#projects .all-projects .project-info p {
-			font-size: 1.1rem;
+		#projects .all-projects .project-info .pa {
+			font-size: 7.5px;
+			
 		}
+		#projects .all-projects .project-info .linea {
+			font-size: 7.5px;
+			margin: 12px 0;
+		}
+		
 	  }
 
 
@@ -1370,6 +1734,7 @@ p {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+	
 }
 
 .informacion-contacto{
@@ -1389,6 +1754,7 @@ p {
     .informacion-contacto{
         height: 100vh;
     }
+	
 
 }
 .informacion-contacto::before{
@@ -1642,6 +2008,7 @@ flex-direction: row;
 		width: calc(100% - 50px); /* Ajusta el ancho de las tarjetas según tu preferencia */
 		margin: 25px;
 	}
+	
   }
   
 /*END */
@@ -1654,7 +2021,8 @@ flex-direction: row;
 	.tarjeta {
 	  margin-bottom: 20px;
 	}
-  }
+ 
+}
   
   
 
@@ -1671,11 +2039,12 @@ flex-direction: row;
 
 @media (max-width: 768px) {
 	#opinions{
-		margin-top: -100px;
+		margin-top: -150px;
+	
 	}
 	.opinions-section{
 		position: absolute;
-		margin-top: -580px;
+		margin-top: -500px;
 
 	}
 	.opinions-section h1.section-title {
@@ -1683,26 +2052,13 @@ flex-direction: row;
 	  line-height: 2rem;
 	}
 	
-	.opinions-info p {
+	.opinions-info .opa {
 	  font-size: 0.9rem;
 	}
   }
+  
 
-  @media (max-width: 1024px) {
-	/* Estilos para pantallas con un ancho máximo de 1024px, como tabletas */
-	.section-title {
-	  font-size: 2rem;
-	  line-height: 2.5rem;
-	}
 
-	.opinions-item {
-	  margin-bottom: 30px;
-	}
-	
-	.opinions-info p {
-	  font-size: 0.9rem;
-	}
-  }
   	/* end opinions */
 
 	/*why work with DATACOR*/
@@ -1742,8 +2098,14 @@ flex-direction: row;
 	  
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
-	
+	/*Oponiones*/
+	#opinions{
+		margin-top: -280px;
+	}
 
+	#work2{
+		margin-top: -200px;
+	}
 	.cta {
 		font-size: 2rem;
 		padding: 10px 30px;
@@ -1937,6 +2299,8 @@ flex-direction: row;
 	.flip-card-front h2{
 		font-size: 1.6rem;
 	}
+	/*EL ESPACIO DE LAS SECCON WORK2*/
+
 
 	/*End service section 2*/
 	main {
@@ -2005,7 +2369,19 @@ flex-direction: row;
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
+
+
 }
+@media (min-width:1500px) {
+	#work2{
+		margin-top: -400px;
+	}
+	#opinions{
+		margin-top: -450px;
+	}
+	
+}
+
 /* End  Media Query For Desktop */
 
 

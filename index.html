@@ -2,11 +2,23 @@
 <html lang="es">
 
 <head>
-  <link rel="canonical" href="URL-de-la-pagina-preferida">
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4BKH7ZZB2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L4BKH7ZZB2');
+</script>
+
+<link rel="canonical" href="https://www.cordilleradata.com/index.html">
+ <!-- font awesome cdn  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <meta property="og:site_name" content="Cordilleradata">
+  <link rel="stylesheet" href="./css/style.css?v=1.0">
   <title>Proveer servicios de publicidad | investigación de mercados y opinión</title>
 
 <meta name="keywords" content="Publicidad online, Servicio de SEO en Perú, Posicionamiento de web sites en Perú, Empresa de publicidad en Perú">
@@ -21,8 +33,11 @@
 
 <!-- Open Graph par whatsapp y facebook -->
 
-<meta property="og:title" content="Online advertising company" />
-<meta property="og:description" content="Advertising & marketing" />
+
+<meta property="og:title" content="Empresa de publicidad online" />
+<meta property="og:description" content="Publicidad y marketing " />
+
+
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.cordilleradata.com" />
 <meta property="og:image" content="https://www.cordilleradata.com/img.icon/Datacor.png" />
@@ -66,70 +81,92 @@
   <section id="header" class="section-center">
     <div class="header container">
       <div class="nav-bar">
-        <div class="logo">
-          <a href="#hero"><img  src="img.icon/Datacor01.png" alt="logo"></a>
-        </div>
+        <a class="logoo" title="Esto es el logo de la empreas" href="#"><img class="scroll-logo" src="img.icon/Datacor01.png" alt="logo"></a>
+
+        <div class="language">
+          <div class="language-selected">
+              EN-ES
+          </div>
+          <ul>
+              <li><a href="#" title="Idioma Ingles" class="en">English</a></li>
+              <li><a href="#" title="Idioma Español" class="es">Español</a></li>
+          </ul>
+      </div>
+ 
         <div class="nav-list">
           <div class="hamburger">
             <div class="bar"></div>
           </div>
+          
           <ul>
-            <li><a href="index.html" data-after="Home">Inicio</a></li>
-            <li><a href="publicidad.html" data-after="advertising">Publicidad</a></li>
-            <li><a href="investigation.html" data-after="Contact">Investigaciones</a></li>
-            <li><a href="project.html" data-after="Projects">Proyectos</a></li>
-            <li><a href="plan_estrategico.html" data-after="Strategic plan">Plan estratégico</a></li> 
-            <li><a href="contact.html" data-after="Contact">Contacto</a></li> 
+
+            <li><a href="index.html" title="Pagina de inicio" data-after="Home">Inicio</a></li>
+            <li><a href="publicidad.html" title="Pagina de publicidad" data-after="advertising">Publicidad</a></li>
+            <li><a href="investigation.html" title="Pagina de investigaciones" data-after="Contact">Investigaciones</a></li>
+            <li><a href="project.html" title="Pagina de Proyectos" data-after="Projects">Proyectos</a></li>
+            <li><a href="plan-estrategico.html" title="Pagina de plan estratégico" data-after="Strategic plan">Plan estratégico</a></li> 
+            <li><a href="contact.html" title="Pagina de contacto" data-after="Contact">Contacto</a></li> 
           </ul>
         </div>
+
       </div>
     </div>
   </section>
   <!-- End Header -->
 <!-- section  hero -->
 <section id="container-slider">
-   <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
-   <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+   <a title="Boton de click anterior" href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+   <a title="Boten te click siguiente" href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
    <ul class="listslider">
-     <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
-     <li><a itlist="itList_1" href="#"></a></li>
-     <li><a itlist="itList_2" href="#"></a></li>
-     <li><a itlist="itList_2" href="#"></a></li>
+     <li><a title="Lista1" itlist="itList_0" href="#" class="item-select-slid"></a></li>
+     <li><a title="Lista2" itlist="itList_1" href="#"></a></li>
+     <li><a title="Lista3" itlist="itList_2" href="#"></a></li>
+     <li><a title="Lista4" itlist="itList_3" href="#"></a></li>
    </ul>
    <ul id="slider">
-     <li style="background-image: url('img/job-office-team.png'); z-index:0; opacity: 1;">
+     <li class="img1" >
        <div class="content_slider" >
-         <div>
-           
-	   <p>Publicidad, marketing, estudios de mercado y formulación de proyectos</p>
-	   <a href="#" target="_blank" class="btnSlider">Acceder</a>
+         <div>  
+
+           <!--<h2>Imagen 1</h2>-->
+	   <p class="la1">Publicidad, marketing, estudios de mercado y formulación de proyectos</p>
+
+	   <a title="boton para acceder" href="#" target="_blank" rel="noopener noreferrer" class="btnSlider">Acceder</a>
 	 </div>
        </div>
      </li>
-     <li style="background-image: url('img/marketing01.jpg'); ">
+     <li class="img2" >
        <div class="content_slider" >
          <div>
+           <!--<h2>Imagen 2</h2>-->
+	   <p class="lane2">Publicidad con páginas web y redes sociales </p>
+
          
-	   <p>Publicidad con páginas web y redes sociales</p>
-	   <a href="publicidad.html" target="_blank" class="btnSlider">Acceder</a>
+	 
+
+	   <a title="Boton para acceder" href="publicidad.html" target="_blank" rel="noopener noreferrer" class="btnSlider">Acceder</a>
 	 </div>
        </div>
      </li>
-     <li style="background-image: url('img/Slider3.jpeg'); ">
+     <li class="img3" >
        <div class="content_slider" >
          <div>
-        
-	   <p>Elaboración de investigación de mercados</p>
-	   <a href="investigation.html" target="_blank" class="btnSlider">Acceder</a>
+
+           <!--<h2>Imagen 3</h2>-->
+	   <p class="lane3">Elaboración de investigación de mercados </p>
+
+	   <a title="Boton para acceder" href="investigation.html" target="_blank" rel="noopener noreferrer" class="btnSlider">Acceder</a>
 	 </div>
        </div>
      </li>
-     <li style="background-image: url('img/learn-img.jpg'); ">
+     <li class="img4" >
         <div class="content_slider" >
           <div>
-          
-        <p>Plan estratégico para empresas y elaboración de proyectos</p>
-        <a href="plan_estrategico.html" target="_blank" class="btnSlider">Acceder</a>
+
+            <!--<h2>Imagen 4</h2>-->
+        <p class="lane4">Plan estratégico para empresas y elaboración de proyectos</p>
+
+        <a title="Boton para acceder" href="plan-estrategico.html" target="_blank" rel="noopener noreferrer" class="btnSlider">Acceder</a>
       </div>
         </div>
       </li>
@@ -149,7 +186,7 @@
         </div>
 
         <div class="col-righ">
-          <h1 class="section-title">compañia de publicidad e invetigaciones  <span>cordillera data</span></h1>
+          <h1 class="section-title">compañia de publicidad e invetigaciones  <span>cordillera data </span></h1>
           <h2>la compañia Cordillera data</h2>
           <p>Es una empresa peruana especialista en proveer servicios de publicidad, investigación de mercados y opinión. Elaboración y evaluación de proyectos. 
             Los servicios de publicidad se realizan en base al marketing operativo, para evaluar el producto o servicio, identificar el segmento de mercado, 
@@ -178,41 +215,59 @@
     <section id="work2" >
       <div class="work container">
         <div class="work-top">
-          <h1 class="section-title">¿por que trabajar con <span>datacor</span>?</h1>
-          <p>Para la publicidad trabajamos sobre la base del marketing operativo: Evaluamos el producto o servicio, el mercado, la promoción y publicidad. 
-            Contamos con profesionales de la informática, diseñadores gráficos. Redactores bilingües en español e inglés. 
-            Canales masivos en redes sociales para el soporte de la publicidad. 
-            Tenemos experiencia y personal para la elaboración de investigación de mercado. Elaboración de cuestionarios de encuesta, 
-            muestreo y recopilación de la información a nivel nacional.
+          <h2 class="section-title">¿por que trabajar con <span>datacor</span>?</h2>
+
+          <p>Para la publicidad trabajamos sobre la base del marketing operativo: Evaluamos el producto o servicio, el mercado, la promoción y publicidad.
+            Contamos con profesionales de la informática, diseñadores gráficos. Redactores bilingües en español e inglés.
+            Canales masivos en redes sociales para el soporte de la publicidad.
+            Tenemos experiencia y personal para la elaboración de investigación de mercado. Elaboración de cuestionarios de encuesta,
+            muestro y recopilacion de la informacion a nivel nacional.
+
             </p>
             
         </div>
     </section>
   <!-- END SECTION WHY WORK WHIT DATACOR-->
-  
+  <section class="general" >
+    <img src="img/seo.png" alt="Imagen de seo">
+    <div class="contenedor">
+        <div class="imagen">
+          <h2 class="empresa">Conose más sobre la compañia cordilleradata</h2>
+          <div class="movie">
+            <a href="#"><button>Ver video</button></a>
+          </div>
+    </div>
+  </div>
+  </section>
+
  <!-- Footer -->
  <footer>
   <div class="footer-container">
       <div class="contact-info">
           <h2>Contacto</h2>
-          <p>DIRECCIÓN: Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú.</p>
-          <p>TELÉFONO: +51 999365216</p>
-          <p>CORREO: cordilleradatascience@gmail.com</p>
+
+          <p class="direccion">DIRECCIÓN: Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú.</p>
+
+
+
+          <p class="telefono">TELÉFONO: +51 999365216</p>
+          <p class="correo">CORREO: cordilleradatascience@gmail.com</p>
+
       </div>
       <div class="social-media">
           <h2>Síguenos</h2>
           <div class="re">
-          <a href="https://www.facebook.com/Cordilleradata"><img src="img.icon/facebook-new.png" alt="Facebook"></a>
+          <a title="Pagina de facebook" href="https://www.facebook.com/Cordilleradata" target="_blank" rel="noopener noreferrer"><img src="img.icon/facebook-new.png" alt="Facebook"></a>
         </div>
         <div class="re">
-          <a href="https://instagram.com/cordilleradata?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img src="img.icon/instagram.png" alt="instagram" /></a>
-        </div>
-        <!--<div class="re">
-          <a href="#"><img src="img.icon/twitter.png" alt="twitter" /></a>
+          <a title="Pagina de instagram" href="https://instagram.com/cordilleradata" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-instagram-100.png" alt="instagram" /></a>
         </div>
         <div class="re">
-          <a href="#"><img src="img.icon/behance.png" alt="behance" /></a>
-        </div>-->
+          <a title="Pagina de linkedin" href="#" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-linkedin-100.png" alt="linkedin" /></a>
+        </div>
+        <div class="re">
+          <a title="Pagina de youtube" href="#" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-youtube-100.png" alt="Youtube" /></a>
+        </div>
           
       </div>
   </div>
@@ -271,8 +326,89 @@
     }
   });
 </script>-->
+<!--<style>
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 720px) {
+    /* Ajusta el ancho del chat */
+    #watson-assistant-root {
+      width: 20%;
+      max-width: 15%;
+    }
 
-<script  src="js/app.js"></script>
+    /* Ajusta el tamaño del botón de cierre (si es necesario) */
+    .close-button {
+      font-size: 25px;
+    }
+
+    /* Ajusta el tamaño del cuadro de entrada de texto */
+    .input-box {
+      width: 20%;
+      max-width: 15%;
+    }
+  }
+</style>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "ed8d1a03-0689-4aa6-9655-0cc3f2a6685b",
+    region: "au-syd",
+    serviceInstanceID: "c6f1e9b7-1221-4f29-85b7-711419c03190",
+    onLoad: function(instance) {
+      instance.render();
+    }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>-->
+
+
+
+
+
+<div class="floating-button" id="social-button">
+  <span>Redes Sociales</span>
+</div>
+
+<div class="social-icon-list" id="social-container">
+ <a title="Pagina de facebook" class="iq" href="https://www.facebook.com/Cordilleradata" target="_blank" rel="noopener noreferrer"> <div class="icon-group">
+  <img src="img/facebook.png" alt="Facebook">
+      <span class="icon-text">
+          Facebook
+      </span>
+      <span class="icon-bg"></span>
+  </div></a>
+
+<a title="Pagina de linkedin" class="iq" href="#" target="_blank " rel="noopener noreferrer"><div class="icon-group">
+<img src="img/linkedin (1).png" alt="Linkedin">
+<span class="icon-text">
+  Linkedin
+</span>
+<span class="icon-bg"></span>
+</div></a>
+
+  <a title="Pagina de instagram" class="iq" href="https://instagram.com/cordilleradata?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noopener noreferrer"><div class="icon-group">
+    <img src="img/instagram (3).png" alt="Instragram">
+      <span class="icon-text">
+          Instragram
+      </span>
+      <span class="icon-bg"></span>
+  </div></a>
+  
+  <a title="pagina de Youtube" class="iq" href="#" target="_blank" rel="noopener noreferrer"><div class="icon-group">
+    <img src="img/youtube(2).png" alt="Youtube">
+      <span class="icon-text">
+          Youtube
+      </span>
+      <span class="icon-bg"></span>
+  </div></a>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script  src="js/app.js?v=1.0"></script>
 </body>
 
 </html>

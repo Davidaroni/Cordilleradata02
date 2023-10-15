@@ -10,7 +10,7 @@
 <script type="text/javascript">
   emailjs.init('dN-OxigOns0bf7_15')
 </script>
-  <link rel="stylesheet" href="./css/contact.css">
+<link rel="stylesheet" href="./css/contact.css?v=1.0">
   <title>Contacto | innovación en movimiento</title>
 
   <meta name="keywords" content="Contacto de publicidad online, Contacto de servicio de SEO en Perú">
@@ -33,21 +33,31 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-<label class="logoo">
-  <a href="#hero"><img class="scroll-logo" src="img.icon/Datacor01.png" alt="logo"></a>
-</label>
+
+  <a class="logoo" title="Esto es el logo de la empreas" href="#"><img class="scroll-logo" src="img.icon/Datacor01.png" alt="logo"></a>
+
+<div class="language">
+  <div class="language-selected">
+      EN-ES
+  </div>
+  <ul>
+      <li><a title="Idioma Ingles" href="#" class="en">English</a></li>
+      <li><a title="Idioma Español" href="#" class="es">Español</a></li>
+  </ul>
+</div>
 
         <div class="nav-list">
           <div class="hamburger">
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="index.html" data-after="Home">Inicio</a></li>
-            <li><a href="publicidad.html" data-after="advertising">Publicidad</a></li>
-            <li><a href="investigation.html" data-after="Contact">Investigaciones</a></li>
-            <li><a href="project.html" data-after="Projects">Proyectos</a></li>
-            <li><a href="plan_estrategico.html" data-after="Strategic plan">Plan estratégico</a></li> 
-            <li><a href="contact.html" data-after="Contact">Contacto</a></li>
+
+            <li><a href="index.html" title="Pagina de inicio" data-after="Home">Inicio</a></li>
+            <li><a href="publicidad.html" title="Pagina de publicidad" data-after="advertising">Publicidad</a></li>
+            <li><a href="investigation.html" title="Pagina de investigaciones" data-after="Contact">Investigaciones</a></li>
+            <li><a href="project.html" title="Pagina de Proyectos" data-after="Projects">Proyectos</a></li>
+            <li><a href="plan-estrategico.html" title="Pagina de plan estratégico" data-after="Strategic plan">Plan estratégico</a></li> 
+            <li><a href="contact.html" title="Pagina de contacto" data-after="Contact">Contacto</a></li> 
           </ul>
         </div>
       </div>
@@ -60,23 +70,23 @@
 <section class="contacto" id="contacto">
   <div class="contenido-contacto">
       <div class="informacion-contacto">
-          <h3>Informacion de contacto</h3>
-         <p>cordilleradatascience@gmail.com</p>
-          <p>+51 999365216</p>
+          <h3 class=" info">Informaciòn de contacto</h3>
+         <p class="pa">cordilleradatascience@gmail.com</p>
+          <p class="pa1">+51 999365216</p>
       </div>
       
       <form id="form" class="formulario-contacto">
-        <h3>Solicita tu cotización</h3>
+        <h3 class="sotizaciòn">Solicita tu cotización</h3>
           <div class="input-contacto">
-              <label for="from_name">Nombre</label>
+              <label class="name" for="from_name">Nombre</label>
               <input type="text" id="from_name" placeholder="Pedro Perez">
           </div>
           <div class="input-contacto">
-              <label for="email_id">Correo</label>
+              <label class="email" for="email_id">Correo</label>
               <input type="email" name="email_id" id="email_id" placeholder="example@example.com">
           </div>
           <div class="input-contacto">
-            <label for="message">Mensaje</label>
+            <label class="mensaje" for="message">Mensaje</label>
             <input type="text" id="message" name="message" >
         </div> 
         <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
@@ -104,22 +114,22 @@
       <div class="contact-item">
         <div class="icon"><img src="img.icon/phone.png" alt="TELEFONO"/></div>
         <div class="contact-info">
-          <h1>Teléfono</h1>
-          <h2>+51 999365216</h2>
+          <h1 class="tel">Teléfono</h1>
+          <h3 class="num">+51 999365216</h3>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="img.icon/email.png" alt="CORREO" /></div>
         <div class="contact-info">
-          <h1>Correo Electrónico</h1>
-          <h2>cordilleradatascience@gmail.com</h2>
+          <h1 class="em">Correo Electrónico</h1>
+          <h3 class="core">cordilleradatascience@gmail.com</h3>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="img.icon/address.png" alt="ubicación"/></div>
         <div class="contact-info">
-          <h1>Dirección</h1>
-          <h2>Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú</h2>
+          <h1 class="direc">Dirección</h1>
+          <h3 class="calle">Calle José María Vilchez 840, San Juan de Miraflores, Lima, Lima, Perú</h3>
         </div>
       </div>
       
@@ -134,7 +144,16 @@
     <div class="contact-section">
       <h1 class="section-title">Ubiquenos<span></span></h1>
     </div>
-    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.2163514794825!2d-76.97040682565653!3d-12.16566864412455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8568fc6e987%3A0x9b21b2f3881f40cc!2sJose%20Maria%20Vilchez%20840%2C%20San%20Juan%20de%20Miraflores%2015824!5e0!3m2!1ses-419!2spe!4v1688232083052!5m2!1ses-419!2spe" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-wrapper">
+        <iframe
+          id="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.2163514794825!2d-76.97040682565653!3d-12.16566864412455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8568fc6e987%3A0x9b21b2f3881f40cc!2sJose%20Maria%20Vilchez%20840%2C%20San%20Juan%20de%20Miraflores%2015824!5e0!3m2!1ses-419!2spe!4v1688232083052!5m2!1ses-419!2spe"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
   </div>
 </section>
 
@@ -149,20 +168,20 @@
     <div class="brand">
       <h1><span>DA</span>TA<span>CO</span>R</h1>
     </div>
-    <h2>Your Complete Web Solution</h2>
+    <h2 >Síganos</h2>
     <div class="social-icon">
       <div class="social-item">
-        <a href="https://www.facebook.com/Cordilleradata"><img src="img.icon/facebook-new.png" alt="Facebook" /></a>
+        <a title="Pagina de facebook" href="https://www.facebook.com/Cordilleradata" target="_blank" rel="noopener noreferrer"><img src="img.icon/facebook-new.png" alt="Facebook" /></a>
       </div>
       <div class="social-item">
-        <a href="https://instagram.com/cordilleradata?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><img src="img.icon/instagram.png" alt="instagram" /></a>
+        <a title="Pagina de instagram" href="https://instagram.com/cordilleradata" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-instagram-100.png" alt="instagram" /></a>
       </div>
-        <!--<div class="re">
-          <a href="#"><img src="img.icon/twitter.png" alt="twitter" /></a>
-        </div>
-        <div class="re">
-          <a href="#"><img src="img.icon/behance.png" alt="behance" /></a>
-        </div>-->
+      <div class="social-item">
+        <a title="Pagina de linkedin" href="#" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-linkedin-100.png" alt="linkedin" /></a>
+      </div>
+      <div class="social-item">
+        <a title="Pagina de youtube" href="#" target="_blank" rel="noopener noreferrer"><img src="img.icon/icons8-youtube-100.png" alt="Youtube" /></a>
+      </div>
     </div>
     <p>&copy; 2023 Datacor. Todos los derechos reservados.</p>
   </div>
@@ -173,8 +192,8 @@
   <!-- End Footer -->
 
   
-
-<script  src="js/cursor.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+<script  src="js/cursor.js?v=1.0"></script>
   <script>
     const btn = document.getElementById('button');
 
