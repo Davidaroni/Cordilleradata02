@@ -81,9 +81,8 @@
   <section id="header" class="section-center">
     <div class="header container">
       <div class="nav-bar">
-        <div class="logo">
-          <a href="#" title="Esto es el logo de la empresa"><img  src="img.icon/Datacor01.png" alt="logo"></a>
-        </div>
+        <a class="logoo" title="Esto es el logo de la empreas" href="#"><img class="scroll-logo" src="img.icon/Datacor01.png" alt="logo"></a>
+
         <div class="language">
           <div class="language-selected">
               EN-ES
@@ -229,7 +228,18 @@
         </div>
     </section>
   <!-- END SECTION WHY WORK WHIT DATACOR-->
-  
+  <section class="general" >
+    <img src="img/seo.png" alt="Imagen de seo">
+    <div class="contenedor">
+        <div class="imagen">
+          <h2 class="empresa">Conose más sobre la compañia cordilleradata</h2>
+          <div class="movie">
+            <a href="#"><button>Ver video</button></a>
+          </div>
+    </div>
+  </div>
+  </section>
+
  <!-- Footer -->
  <footer>
   <div class="footer-container">
@@ -316,6 +326,46 @@
     }
   });
 </script>-->
+<!--<style>
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 720px) {
+    /* Ajusta el ancho del chat */
+    #watson-assistant-root {
+      width: 20%;
+      max-width: 15%;
+    }
+
+    /* Ajusta el tamaño del botón de cierre (si es necesario) */
+    .close-button {
+      font-size: 25px;
+    }
+
+    /* Ajusta el tamaño del cuadro de entrada de texto */
+    .input-box {
+      width: 20%;
+      max-width: 15%;
+    }
+  }
+</style>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "ed8d1a03-0689-4aa6-9655-0cc3f2a6685b",
+    region: "au-syd",
+    serviceInstanceID: "c6f1e9b7-1221-4f29-85b7-711419c03190",
+    onLoad: function(instance) {
+      instance.render();
+    }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>-->
+
+
+
 
 
 <div class="floating-button" id="social-button">

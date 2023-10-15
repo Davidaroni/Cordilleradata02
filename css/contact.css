@@ -180,11 +180,13 @@ p {
 
 }
 
-.logoo img{
-	width:95px ;
-	height: 11vh ;
+.scroll-logo{
+	
+		width: 100px; /* Tamaño predeterminado del logo para pantallas más pequeñas */
+		height: auto; /* Mantener la proporción de aspecto */
+	  
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px)  {
 	.logoo {
 	  text-align: center; /* Centra el logotipo */
 	}
@@ -198,16 +200,8 @@ p {
 	  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
 	}
   }
-  @media (max-width: 1200px) {
-	.logoo {
-	  text-align: center; /* Centra el logotipo en tablet */
-	}
   
-	.logoo img {
-	  max-width: 100%; /* Ajusta el ancho máximo del logotipo al 100% del contenedor */
-	  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
-	}
-  }
+  
 
 /* Header section */
 #header {
@@ -407,7 +401,7 @@ p {
 	text-transform: uppercase;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .contenido-contacto{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -542,6 +536,31 @@ p {
 	color: white;
 	font-size: 1.3rem;
 }
+/*SECCION DE MAPA*/
+
+#map-container {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	
+  }
+  
+  .map-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* Proporción de aspecto 16:9 para el iframe */
+	height: 0;
+  }
+  
+  #map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+
+  
 
 
 /* End Footer */
@@ -676,19 +695,17 @@ p {
 		padding-left: 20px;
 	}
 
-	 #map-container {
-		width: 50%; /* Puedes ajustar este valor para cambiar el tamaño del mapa */
-		height: 80vh; /* Puedes ajustar este valor para cambiar la altura del mapa */
-		margin-top: -56.1%;
-	}
+
 	  
-	  #map {
-		width: 100%;
-		height: 100%;
+	.map-wrapper {
+		padding-bottom: 75%; /* Puedes ajustar esta proporción para pantallas más pequeñas */
 	  }
 	  #map-container {
 		float:left; /* Alinear a la derecha */
 		margin-left: 40%; /* Espacio entre el mapa y los otros elementos */
+		width: 50%; /* Puedes ajustar este valor para cambiar el tamaño del mapa */
+		height: 90vh; /* Puedes ajustar este valor para cambiar la altura del mapa */
+		margin-top: -69.1%;
 	  }
 
 	
@@ -701,6 +718,14 @@ p {
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
 	/* header */
+	.logoo {
+		text-align: center; /* Centra el logotipo en pantallas grandes */
+	  }
+	  
+	  .logoo img {
+		max-width: 100%; /* Ajusta el ancho máximo del logotipo al 100% del contenedor */
+		height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+	  }
 	#header .hamburger {
 		display: none;
 	}
@@ -726,8 +751,26 @@ p {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
+	/*Map section*/
+
+
+    .map-wrapper {
+      padding-bottom:55%; /* Ajusta la proporción de aspecto para pantallas mayores a 1200px */
+    }
+
+    #map {
+      width: 80%; /* Ajusta el tamaño del mapa para pantallas mayores a 1200px */
+      left: 10%; /* Centra el mapa horizontalmente en la pantalla */
+    }
+	#map-container{
+	margin-left: 40%; /* Espacio entre el mapa y los otros elementos */
+	width: 50%; /* Puedes ajustar este valor para cambiar el tamaño del mapa */
+	height: 60vh; /* Puedes ajustar este valor para cambiar la altura del mapa */
+	margin-top: -36.1%;
+	}
 }
 /* End  Media Query For Desktop */
+
 
 
 
@@ -763,14 +806,7 @@ p {
 		max-width: 100%; /* Take up full width on smaller screens */
 		margin:50px 0px 0px 0px;
 	  }
-	  #map-container {
-		  margin-top: 20px; /* Adjust the height for smaller screens */
-		}
-		#map{
-		  height: 400px;
-		  width: 500px;
-		  margin:0px 0px 0px 60px;
-		}
+
   }
   
   /* Estilos para tabletas */
@@ -788,7 +824,7 @@ p {
     }
     
   }
-  @media (max-width: 680px) {
+  @media screen and (max-width: 680px) {
 	.contact.container {
 	  flex-direction: column; 
 	}
@@ -796,18 +832,12 @@ p {
 		margin-top: 25px;
 	}
 
-	#map-container {
-		margin-top: -20px; /* Adjust the height for smaller screens */
-	  }
-	  #map{
-		height: 300px;
-		width: 35vh;
-		margin-left:43px;
-	  }
+
+
 	}
 
 	
-	@media (max-width: 768px) {
+	@media screen and (max-width: 768px) {
 		.contact-item {
 		  display: block;
 		  margin-bottom: 20px;

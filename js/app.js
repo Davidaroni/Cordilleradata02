@@ -151,7 +151,9 @@ $(function(){
         "Market research is carried out with the purpose of determining and identifying the suppliers and demanders of products and services, and quantifying the demand. In addition to identifying the relevant characteristics of the market.\n" +
         "Opinion research is carried out with the purpose of determining the opinion of the general public, regarding aspects of identification and perception regarding social political aspects and prestige of brands and private and public institutions.\n" +
         "The preparation and evaluation of the investment project. It is a document that contains all the necessary information to demonstrate the viability or non-viability of a project. And all the information necessary for the initiation and operation of a project.")
- 
+        //Section  video
+        $(".empresa").text("Learn more about the company cordillerdata");
+        $(".movie button").text("Watch video");
       // Cambiar el texto dentro del <h1>
       var sectionTitle = $(".work-top .section-title");
       sectionTitle.contents().filter(function() {
@@ -210,7 +212,9 @@ $(function(){
     "La investigación de mercados se realiza con la finalidad de determinar e identificar a los ofertantes y demandantes de productos y servicios, y cuantificar la demanda. Además de identificar las características relevantes del mercado.\n" +
     "La investigación de opinión, se realiza con la finalidad de determinar la opinión del público en general, respecto a aspectos de identificación y percepción respecto a aspectos políticos sociales y prestigio de marcas e instituciones privadas y públicas.\n" +
     "La elaboración y evaluación del proyecto de inversión. Es un documento que contiene toda la información necesaria que demuestre la viabilidad o inviabilidad de un proyecto. Y toda la información necesaria para el inicio y la operación de un proyecto.");
-
+    // SECCION DE VIDEO//
+    $(".empresa").text("Conose màs sobre la compañia cordillerdata");
+    $(".movie button").text("Ver video")
           // Cambiar el texto dentro del <h1>
           var sectionTitle = $(".work-top .section-title");
           sectionTitle.contents().filter(function() {
