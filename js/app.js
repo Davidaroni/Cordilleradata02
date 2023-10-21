@@ -114,7 +114,33 @@ if (document.querySelector('#container-slider')) {
     //   elements[siguienteElement].style.zIndex = 1;
     // }
 
-      
+    $(document).ready(function() {
+        // Cuando se hace clic en el enlace con la clase "en" (English)
+        $(".en").click(function(event) {
+            // Prevenir la acción predeterminada del enlace
+            event.preventDefault();
+    
+            // Ocultar los menús
+            
+            $(".nav-list li:eq(2) a").hide("Research");
+            $(".nav-list li:eq(3) a").hide("Projects");
+            $(".nav-list li:eq(4) a").hide("Strategic Plan");
+        });
+
+            
+    $(".es").click(function(event) {
+        // Prevenir la acción predeterminada del enlace
+        event.preventDefault();
+
+        // Restaurar los menús
+        $(".nav-list li:eq(2) a").show("Research");
+        $(".nav-list li:eq(3) a").show("Projects");
+        $(".nav-list li:eq(4) a").show("Strategic Plan");
+    });
+    });
+
+
+    
 //INGLES
 $(function(){
     $(".en").click(function(){
