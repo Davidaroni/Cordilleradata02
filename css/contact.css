@@ -26,14 +26,7 @@
     margin-right: 10px;
 }
 
-/* jQuery class*/
 
-.language-selected.change-en:before{
-    background-image: url(../img.icon/estados-unidos.png);
-}
-.language-selected.change-es:before{
-    background-image: url(../img.icon/espana.png);
-}
 
 .language ul{
     position: absolute;
@@ -69,17 +62,98 @@
     vertical-align: middle;
     margin-right: 10px;
 }
-a.es:before{
+a.ess:before{
     background-image: url(../img.icon/espana.png);
 }
-a.en:before{
+a.enn:before{
     background-image: url(../img.icon/estados-unidos.png);
 }
-
 
 .language:hover ul{
     display: block;
 }
+
+/*CSS INGLES*/
+
+
+.language1{
+    position: relative;
+    width:120px ;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.language-selected1{
+    display: flex;
+    align-items: center;
+    color: #ee0000;
+    cursor: pointer;
+}
+.language-selected1:before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img.icon/estados-unidos.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+
+
+.language1 ul{
+    position: absolute;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    padding-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+    display: none;
+}
+
+.language1 ul li{
+    list-style: none;
+}
+
+.language1 ul li a{
+    display: block;
+    color: #252525;
+    padding-top: 5px 10px;
+}
+
+.language1 ul li:hover{
+    background-color: #f8f8f8;
+}
+
+.language1 ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+a.ess:before{
+    background-image: url(../img.icon/espana.png);
+}
+a.enn:before{
+    background-image: url(../img.icon/estados-unidos.png);
+}
+
+
+
+
+.language1:hover ul{
+    display: block;
+}
+
+
+
+
+
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;

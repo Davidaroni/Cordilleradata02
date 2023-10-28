@@ -10,6 +10,86 @@
     --container-shadow:2.3px 2.3px 1.9px rgba(0, 0, 0, 0.035),5.4px 5.4px 4.3px rgba(0, 0, 0, 0.048),9.7px 9.7px 7.7px rgba(0, 0, 0, 0.054),16.1px 16.1px 12.8px rgba(0, 0, 0, 0.057),26.5px 26.5px 21.2px rgba(0, 0, 0, 0.062),46.2px 46.2px 37px rgba(0, 0, 0, 0.073),100px 100px 80px rgba(0, 0, 0, 0.12);
 }
 
+.sobre-nosotros{
+    padding: 30px 0 60px 0;
+	margin-bottom: 100px;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+	
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+/* Estilos para dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+	.sobre-nosotros {
+	  padding: 20px;
+	}
+	.contenedor-sobre-nosotros {
+	  flex-direction: column;
+	}
+	.imagen-about-us {
+	  width: 100%;
+	}
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+  }
+  
+  /* Estilos para dispositivos medianos (tablets) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+	.sobre-nosotros {
+	  padding: 40px;
+	}
+  }
+  
+  /* Estilos para dispositivos grandes (laptops y computadoras) */
+  @media (min-width: 1025px) {
+	.sobre-nosotros {
+	  padding: 60px;
+	}
+  }
+  
+
+
+
 .iq img{
 	height:25px ;
 	width: 25px;
@@ -253,15 +333,6 @@ background-color: var(--container-bg-color);
     margin-right: 10px;
 }
 
-/* jQuery class*/
-
-.language-selected.change-en:before{
-    background-image: url(../img.icon/estados-unidos.png);
-}
-.language-selected.change-es:before{
-    background-image: url(../img.icon/espana.png);
-}
-
 .language ul{
     position: absolute;
     width: 140px;
@@ -296,10 +367,10 @@ background-color: var(--container-bg-color);
     vertical-align: middle;
     margin-right: 10px;
 }
-a.es:before{
+a.ess:before{
     background-image: url(../img.icon/espana.png);
 }
-a.en:before{
+a.enn:before{
     background-image: url(../img.icon/estados-unidos.png);
 }
 
@@ -307,6 +378,90 @@ a.en:before{
 .language:hover ul{
     display: block;
 }
+
+/*CSS INGLES*/
+
+
+.language1{
+    position: relative;
+    width:120px ;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.language-selected1{
+    display: flex;
+    align-items: center;
+    color: #ee0000;
+    cursor: pointer;
+}
+.language-selected1:before{
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img.icon/estados-unidos.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+
+
+.language1 ul{
+    position: absolute;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    padding-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+    display: none;
+}
+
+.language1 ul li{
+    list-style: none;
+}
+
+.language1 ul li a{
+    display: block;
+    color: #252525;
+    padding-top: 5px 10px;
+}
+
+.language1 ul li:hover{
+    background-color: #f8f8f8;
+}
+
+.language1 ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+a.ess:before{
+    background-image: url(../img.icon/espana.png);
+}
+a.enn:before{
+    background-image: url(../img.icon/estados-unidos.png);
+}
+
+
+
+
+.language1:hover ul{
+    display: block;
+}
+
+
+
+
+
+
+
 :root{
     --oscuro:#07070A;
     --azulOscuro:#0A1128;
@@ -449,6 +604,8 @@ p {
 	  max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
 	  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
 	}
+	
+	
   }
   @media (max-width: 1200px) {
 	.logo {
@@ -844,6 +1001,7 @@ p {
 
 
 @media screen and (max-width: 460px){
+	
 	.content_slider h2 {
 	    font-size: 15pt !important;
 	}
@@ -1061,6 +1219,8 @@ margin-top: -80px;
     100% 50%);  
 }
 
+/*service contenedor*/
+
 @media screen and (max-width: 600px) {
 	.gallery img {
 		width: 100%; /* Make images take up full width on smaller screens */
@@ -1068,7 +1228,86 @@ margin-top: -80px;
 		margin-left: 50px;
 	}
 
+
 }
+
+.servicios {
+    padding-top: 5rem;
+	margin-bottom: 185px;
+}
+
+.servicios h2{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--oscuro);
+	text-transform: uppercase;
+	margin-bottom: 55px;
+}
+.servicios span{
+	color: crimson;
+}
+
+@media(min-width: 768px) {
+    .contenido-servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 4rem;
+        
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.servicio i{
+    background-color: var(--linkedin-color);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+    transition: all .3s ease-in-out;
+}
+
+.servicio h3{
+    font-size: 2.2rem;
+    color: var(--azulOscuro);
+}
+.servicio p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .servicio p{
+        text-align: left;
+    }
+	
+
+	
+}
+
+
+@media(min-width: 768px) {
+    .servicio:hover{
+        cursor: pointer;
+    }
+
+    .servicio:hover .fas {
+        background-color: var(--blanco);
+        color: var(--azulClaro);
+    }
+}
+
+/*end*/
+
 /* end why work with DATACOR*/
 
 
@@ -1354,6 +1593,118 @@ margin-top: -80px;
 	font-weight: 500;
 	margin-bottom: 5px;
 }
+
+
+#opinions .opinions{
+	flex-direction: row;
+	max-width: 1200px;	
+	margin: 0 auto;
+	width: 100%;
+}
+#opinions .opinions-items {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#opinions .opinions-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 15px #0000002c;
+	transition: 0.3s ease box-shadow;
+	background-color:white;
+}
+#opinions .opinions-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+	
+}
+#opinions .opinions-info p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+#opinions{
+	margin-top: -250px;
+}
+
+#opinions .opinions{
+	flex-direction: row;
+	max-width: 1200px;	
+	margin: 0 auto;
+	width: 100%;
+}
+#opinions .opinions-items {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#opinions .opinions-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 15px #0000002c;
+	transition: 0.3s ease box-shadow;
+	background-color:white;
+}
+#opinions .opinions-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+	
+}
+#opinions .opinions-info p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+
+#opinions .opinions1{
+	flex-direction: row;
+	max-width: 1200px;	
+	margin: 0 auto;
+	width: 100%;
+}
+#opinions .opinions-items2 {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#opinions .opinions-item2 {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 15px #0000002c;
+	transition: 0.3s ease box-shadow;
+	background-color:white;
+}
+#opinions .opinions-item2:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+	
+}
+#opinions .opinions-info2 p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+/*SERVICIO SECTION MOVILE*/
 
 
 
@@ -2040,8 +2391,13 @@ flex-direction: row;
 @media (max-width: 768px) {
 	#opinions{
 		margin-top: -150px;
-	
+
 	}
+	#opinions .section-title{
+		margin-top: -50px;
+		
+	}
+	
 	.opinions-section{
 		position: absolute;
 		margin-top: -500px;
@@ -2098,9 +2454,23 @@ flex-direction: row;
 	  
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
+
+	.text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start; /* Aligns the content to the top */
+		align-items: center; /* Aligns the content horizontally */
+		height: 100%; /* Takes the full height of the container */
+		margin-top: 89px;
+		padding: 0 10px; /* Adjust padding as needed */
+	  }
 	/*Oponiones*/
 	#opinions{
 		margin-top: -280px;
+	}
+	#opinions .opinions1{
+		margin-top: -600px;
+		margin-bottom: -50px;
 	}
 
 	#work2{
@@ -2299,6 +2669,15 @@ flex-direction: row;
 	.flip-card-front h2{
 		font-size: 1.6rem;
 	}
+	.servicios h2{
+		font-size: 1.7rem;
+	}
+	.servicios h3{
+		font-size: 1.6rem;
+	}
+	.servicios p{
+		font-size: 1.4rem;
+	}
 	/*EL ESPACIO DE LAS SECCON WORK2*/
 
 
@@ -2343,7 +2722,10 @@ flex-direction: row;
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
 	/* header */
-
+	#opinions .opinions1{
+		margin-top: -200px;
+		margin-bottom: -50px;
+	}
 	#header .hamburger {
 		display: none;
 	}
@@ -2378,6 +2760,10 @@ flex-direction: row;
 	}
 	#opinions{
 		margin-top: -450px;
+	}
+	#opinions .opinions1{
+		margin-top: -650px;
+		margin-bottom: -150px;
 	}
 	
 }
