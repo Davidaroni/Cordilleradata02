@@ -83,15 +83,15 @@
         <h3 class="sotizaciòn">Request your quote</h3>
           <div class="input-contacto">
               <label class="name" for="from_name">Name</label>
-              <input type="text" id="from_name" placeholder="Pedro Perez">
+              <input type="text"name="from_name" id="from_name" placeholder="Pedro Perez" required pattern=".*\S+.*" oninvalid="this.setCustomValidity('Please enter your name')" oninput="setCustomValidity('')" >
           </div>
           <div class="input-contacto">
               <label class="email" for="email_id">E-mail</label>
-              <input type="email" name="email_id" id="email_id" placeholder="example@example.com">
+              <input type="email" name="email_id" id="email_id" placeholder="example@example.com" required pattern=".*\S+.*" oninvalid="this.setCustomValidity('Please enter your E-mail')" oninput="setCustomValidity('')" >
           </div>
           <div class="input-contacto">
             <label class="mensaje" for="message">Message</label>
-            <input type="text" id="message" name="message" >
+            <input type="text" id="message" name="message" required pattern=".*\S+.*" oninvalid="this.setCustomValidity('Please enter your message')" oninput="setCustomValidity('')">
         </div> 
         <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
           <div class="input-contacto">
@@ -218,7 +218,7 @@
  
  });
      return;
-   }
+   }                                                                                                                      
  
    btn.value = 'Sending...';
  

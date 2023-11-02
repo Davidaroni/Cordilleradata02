@@ -85,15 +85,15 @@
         <h3 class="sotizaciòn">Solicita tu cotización</h3>
           <div class="input-contacto">
               <label class="name" for="from_name">Nombre</label>
-              <input type="text" id="from_name" placeholder="Pedro Perez">
+              <input type="text" id="from_name" placeholder="Pedro Perez" required>
           </div>
           <div class="input-contacto">
               <label class="email" for="email_id">Correo</label>
-              <input type="email" name="email_id" id="email_id" placeholder="example@example.com">
+              <input type="email" name="email_id" id="email_id" placeholder="example@example.com" required>
           </div>
           <div class="input-contacto">
             <label class="mensaje" for="message">Mensaje</label>
-            <input type="text" id="message" name="message" >
+            <input type="text" id="message" name="message" required>
         </div> 
         <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
           <div class="input-contacto">
@@ -211,15 +211,14 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const recaptchaResponse = grecaptcha.getResponse();
 
   if (!recaptchaResponse) {
-    Swal.fire({
-  icon: 'warning',
-  title: 'Oops...',
-  text: 'Por favor complete el recaptcha',
-
-});
-    return;
-  }
-
+     Swal.fire({
+   icon: 'warning',
+   title: 'Oops...',
+   text: 'Por favor complete el recaptcha',
+ 
+ });
+     return;
+   }
   btn.value = 'Enviando...';
 
   const serviceID = 'default_service';
@@ -232,7 +231,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
   emailjs.sendForm(serviceID, templateID, this)
 
     .then(() => {
-      btn.value = 'Send Email';
+      btn.value = 'Enviar';
       Swal.fire(
         'Enviado!',
         'Tu mensaje ha sido enviado correctamente.',
@@ -240,7 +239,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
           document.getElementById('form').reset(); // Reinicia el formulario
         });
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Enviar';
       alert(JSON.stringify(err));
     });
 });
