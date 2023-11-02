@@ -72,31 +72,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*END CONTA */
-document.addEventListener('DOMContentLoaded', function() {
-  // Obtener el idioma actual del navegador
-  var userLang = navigator.language || navigator.userLanguage;
 
-  // Verificar si el idioma es inglés
-  if (userLang.startsWith('en')) {
-    // Cambiar los enlaces a las páginas en inglés
-    var links = document.querySelectorAll('.enn');
-    links.forEach(function(link) {
-      link.href = link.href.replace('.html', '-en.html');
-    });
-  }
-
-  // Agregar un evento de clic a los enlaces de idioma
-  var languageLinks = document.querySelectorAll('.enn, .ess');
-  languageLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      // Prevenir el comportamiento predeterminado del enlace
-      event.preventDefault();
-
-      // Obtener la URL del enlace
-      var url = link.href;
-
-      // Redirigir a la nueva URL
-      window.location.href = url;
-    });
-  });
-});
+  
