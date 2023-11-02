@@ -197,7 +197,8 @@
   
   <!-- End Footer -->
 
-  
+ <!--LIBRERIA DE SWEETALERT2--> 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script  src="js/cursor.js?v=1.0"></script>
   <script>
@@ -210,12 +211,16 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const recaptchaResponse = grecaptcha.getResponse();
 
   if (!recaptchaResponse) {
-    // Si no se seleccionó el reCAPTCHA, muestra un mensaje de error y no envíes el formulario.
-    alert('Please complete the reCAPTCHA.');
+    Swal.fire({
+  icon: 'warning',
+  title: 'Oops...',
+  text: 'Por favor complete el recaptcha',
+
+});
     return;
   }
 
-  btn.value = 'Sending...';
+  btn.value = 'Enviando...';
 
   const serviceID = 'default_service';
   const templateID = 'template_72v7dor';
@@ -228,7 +233,12 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      Swal.fire(
+        'Enviado!',
+        'Tu mensaje ha sido enviado correctamente.',
+        'success'  ).then(() => {
+          document.getElementById('form').reset(); // Reinicia el formulario
+        });
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));

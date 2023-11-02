@@ -197,43 +197,54 @@
 
   
 
+ <!--LIBRERIA DE SWEETALERT2--> 
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script  src="js/cursor.js?v=1.0"></script>
-  <script>
-    const btn = document.getElementById('button');
-
-document.getElementById('form').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  // Obtén la respuesta del reCAPTCHA
-  const recaptchaResponse = grecaptcha.getResponse();
-
-  if (!recaptchaResponse) {
-    // Si no se seleccionó el reCAPTCHA, muestra un mensaje de error y no envíes el formulario.
-    alert('Please complete the reCAPTCHA.');
-    return;
-  }
-
-  btn.value = 'Sending...';
-
-  const serviceID = 'default_service';
-  const templateID = 'template_72v7dor';
-
-  // Agrega el valor de la respuesta de reCAPTCHA al objeto que se enviará por emailjs
-  const formData = new FormData(this);
-  formData.set('g-recaptcha-response', recaptchaResponse);
-
-  emailjs.sendForm(serviceID, templateID, this)
-
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-  </script>
+ <script  src="js/cursor.js?v=1.0"></script>
+   <script>
+     const btn = document.getElementById('button');
+ 
+ document.getElementById('form').addEventListener('submit', function(event) {
+   event.preventDefault();
+ 
+   // Obtén la respuesta del reCAPTCHA
+   const recaptchaResponse = grecaptcha.getResponse();
+ 
+   if (!recaptchaResponse) {
+     Swal.fire({
+   icon: 'warning',
+   title: 'Oops...',
+   text: 'Please complete the recaptcha',
+ 
+ });
+     return;
+   }
+ 
+   btn.value = 'Sending...';
+ 
+   const serviceID = 'default_service';
+   const templateID = 'template_72v7dor';
+ 
+   // Agrega el valor de la respuesta de reCAPTCHA al objeto que se enviará por emailjs
+   const formData = new FormData(this);
+   formData.set('g-recaptcha-response', recaptchaResponse);
+ 
+   emailjs.sendForm(serviceID, templateID, this)
+ 
+     .then(() => {
+       btn.value = 'Send Email';
+       Swal.fire(
+         'Sent!',
+         'Your message has been sent successfully.',
+         'success'  ).then(() => {
+           document.getElementById('form').reset(); // Reinicia el formulario
+         });
+     }, (err) => {
+       btn.value = 'Send Email';
+       alert(JSON.stringify(err));
+     });
+ });
+   </script>
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
