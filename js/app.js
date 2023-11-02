@@ -26,6 +26,14 @@ menu_item.forEach((item) => {
 	});
 });
 
+document.cookie = "yourCookieName=yourCookieValue; SameSite=None; Secure";
+document.cookie = "your_cookie_name=your_cookie_value; SameSite=None; Secure";
+document.cookie = "your_cookie_name=your_cookie_value; SameSite=Strict";
+document.cookie = "cookie_name=value; SameSite=None; Secure";
+document.cookie = "miCookie=valor; samesite=None; secure";
+
+
+
 if (document.querySelector('#container-slider')) {
     let currentSlide = 0;
     const slides = document.querySelectorAll('#slider li');
