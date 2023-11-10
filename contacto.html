@@ -85,7 +85,7 @@
         <h3 class="sotizaciòn">Solicita tu cotización</h3>
           <div class="input-contacto">
               <label class="name" for="from_name">Nombre</label>
-              <input type="text" id="from_name" placeholder="Pedro Perez" required>
+              <input type="text" name="from_name" id="from_name" placeholder="Pedro Perez" required>
           </div>
           <div class="input-contacto">
               <label class="email" for="email_id">Correo</label>
@@ -93,7 +93,7 @@
           </div>
           <div class="input-contacto">
             <label class="mensaje" for="message">Mensaje</label>
-            <input type="text" id="message" name="message" required>
+            <input type="text" id="message" name="message"  required  >
         </div> 
         <div class="g-recaptcha" data-sitekey="6LekpWInAAAAAHYLK4PEijT9QS66ZxU2-S-etA2-"></div>
           <div class="input-contacto">
@@ -211,15 +211,16 @@ document.getElementById('form').addEventListener('submit', function(event) {
   const recaptchaResponse = grecaptcha.getResponse();
 
   if (!recaptchaResponse) {
-     Swal.fire({
-   icon: 'warning',
-   title: 'Oops...',
-   text: 'Por favor complete el recaptcha',
- 
- });
-     return;
-   }
-  btn.value = 'Enviando...';
+    Swal.fire({
+  icon: 'warning',
+  title: 'Oops...',
+  text: 'Por favor complete el recaptcha',
+
+});
+    return;
+  }
+
+  btn.value = 'Envinado...';
 
   const serviceID = 'default_service';
   const templateID = 'template_72v7dor';
@@ -237,6 +238,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         'Tu mensaje ha sido enviado correctamente.',
         'success'  ).then(() => {
           document.getElementById('form').reset(); // Reinicia el formulario
+          grecaptcha.reset(); // Reinicia el reCAPTCHA
         });
     }, (err) => {
       btn.value = 'Enviar';

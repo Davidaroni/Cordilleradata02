@@ -238,6 +238,7 @@
          'Your message has been sent successfully.',
          'success'  ).then(() => {
            document.getElementById('form').reset(); // Reinicia el formulario
+           grecaptcha.reset(); // Reinicia el reCAPTCHA
          });
      }, (err) => {
        btn.value = 'Send Email';
@@ -295,17 +296,7 @@
               ]
             }
             </script>
-             <!--Scrool
-            <script>
-              window.addEventListener("scroll", function() {
-                var header = document.getElementById("header");
-                if (window.scrollY > 0) {
-                  header.classList.add("scroll-down");
-                } else {
-                  header.classList.remove("scroll-down");
-                }
-              });
-            </script>--> 
+ 
 
 
 </body>

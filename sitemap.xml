@@ -9,38 +9,58 @@
 
 <url>
   <loc>https://www.cordilleradata.com/</loc>
-  <lastmod>2023-09-22T19:21:51+00:00</lastmod>
+  <lastmod>2023-11-02T22:29:03+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://www.cordilleradata.com/index-en.html</loc>
+  <lastmod>2023-11-02T22:29:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.cordilleradata.com/index.html</loc>
-  <lastmod>2023-09-22T19:21:51+00:00</lastmod>
+  <lastmod>2023-11-02T22:29:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.cordilleradata.com/publicidad.html</loc>
-  <lastmod>2023-09-22T19:21:57+00:00</lastmod>
+  <lastmod>2023-11-02T22:29:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.cordilleradata.com/investigation.html</loc>
-  <lastmod>2023-09-22T19:21:52+00:00</lastmod>
+  <loc>https://www.cordilleradata.com/seo.html</loc>
+  <lastmod>2023-11-02T22:29:15+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.cordilleradata.com/project.html</loc>
-  <lastmod>2023-09-22T19:21:56+00:00</lastmod>
+  <loc>https://www.cordilleradata.com/proyectos.html</loc>
+  <lastmod>2023-11-02T22:29:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.cordilleradata.com/plan-estrategico.html</loc>
-  <lastmod>2023-09-22T19:21:59+00:00</lastmod>
+  <lastmod>2023-11-02T22:29:14+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.cordilleradata.com/contact.html</loc>
-  <lastmod>2023-09-22T19:21:49+00:00</lastmod>
+  <loc>https://www.cordilleradata.com/contacto.html</loc>
+  <lastmod>2023-11-02T22:29:09+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.cordilleradata.com/advertising.html</loc>
+  <lastmod>2023-11-02T22:29:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.cordilleradata.com/seo-en.html</loc>
+  <lastmod>2023-11-02T22:29:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.cordilleradata.com/contact.html</loc>
+  <lastmod>2023-11-02T22:29:06+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
